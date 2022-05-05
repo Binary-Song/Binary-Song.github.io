@@ -1,0 +1,1216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KSO Containers: kso::LinkedList&lt; T &gt; 模板类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">KSO Containers
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classkso_1_1_linked_list.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="classkso_1_1_linked_list-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">kso::LinkedList&lt; T &gt; 模板类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>链表类。提供基于迭代器的接口，内部实现为单链表。  
+ <a href="classkso_1_1_linked_list.html#details">更多...</a></p>
+
+<p><code>#include &lt;KsoLinkedList.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list_1_1_const_iterator.html">ConstIterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">常量迭代器。  <a href="classkso_1_1_linked_list_1_1_const_iterator.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list_1_1_iterator.html">Iterator</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkso_1_1_linked_list_1_1_node.html">Node</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">链表的结点  <a href="structkso_1_1_linked_list_1_1_node.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a575eec21e162b3182df675bd14ac858a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#a575eec21e162b3182df675bd14ac858a">LinkedList</a> ()</td></tr>
+<tr class="memdesc:a575eec21e162b3182df675bd14ac858a"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认构造。构造空链表  <a href="classkso_1_1_linked_list.html#a575eec21e162b3182df675bd14ac858a">更多...</a><br /></td></tr>
+<tr class="separator:a575eec21e162b3182df675bd14ac858a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9aa5c9a61ce3b8b8065cd439e8f3cc4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#af9aa5c9a61ce3b8b8065cd439e8f3cc4">LinkedList</a> (<a class="el" href="classkso_1_1_linked_list.html">LinkedList</a> const &amp;src)</td></tr>
+<tr class="memdesc:af9aa5c9a61ce3b8b8065cd439e8f3cc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">拷贝构造。该操作使源中的每个元素被拷贝到本对象中。  <a href="classkso_1_1_linked_list.html#af9aa5c9a61ce3b8b8065cd439e8f3cc4">更多...</a><br /></td></tr>
+<tr class="separator:af9aa5c9a61ce3b8b8065cd439e8f3cc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5ad31bf99e0912cf8d7825e697231b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#ab5ad31bf99e0912cf8d7825e697231b9">LinkedList</a> (<a class="el" href="classkso_1_1_linked_list.html">LinkedList</a> &amp;&amp;src) noexcept</td></tr>
+<tr class="memdesc:ab5ad31bf99e0912cf8d7825e697231b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">移动构造。该操作使源中的元素移动到本对象中。  <a href="classkso_1_1_linked_list.html#ab5ad31bf99e0912cf8d7825e697231b9">更多...</a><br /></td></tr>
+<tr class="separator:ab5ad31bf99e0912cf8d7825e697231b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d77e6b3dacb234d34f08a18abab9d90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_linked_list.html">LinkedList</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#a5d77e6b3dacb234d34f08a18abab9d90">operator=</a> (<a class="el" href="classkso_1_1_linked_list.html">LinkedList</a> const &amp;src)</td></tr>
+<tr class="memdesc:a5d77e6b3dacb234d34f08a18abab9d90"><td class="mdescLeft">&#160;</td><td class="mdescRight">拷贝赋值  <a href="classkso_1_1_linked_list.html#a5d77e6b3dacb234d34f08a18abab9d90">更多...</a><br /></td></tr>
+<tr class="separator:a5d77e6b3dacb234d34f08a18abab9d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee638486646929acca59b05a4385b1fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_linked_list.html">LinkedList</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#aee638486646929acca59b05a4385b1fa">operator=</a> (<a class="el" href="classkso_1_1_linked_list.html">LinkedList</a> &amp;&amp;src) noexcept</td></tr>
+<tr class="memdesc:aee638486646929acca59b05a4385b1fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">移动赋值  <a href="classkso_1_1_linked_list.html#aee638486646929acca59b05a4385b1fa">更多...</a><br /></td></tr>
+<tr class="separator:aee638486646929acca59b05a4385b1fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a547c57b7ed71b3f6f9362746aa978d06"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#a547c57b7ed71b3f6f9362746aa978d06">~LinkedList</a> ()</td></tr>
+<tr class="memdesc:a547c57b7ed71b3f6f9362746aa978d06"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数  <a href="classkso_1_1_linked_list.html#a547c57b7ed71b3f6f9362746aa978d06">更多...</a><br /></td></tr>
+<tr class="separator:a547c57b7ed71b3f6f9362746aa978d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fe90935daa557f55d04315d1a7a36a9"><td class="memTemplParams" colspan="2">template&lt;typename Iter &gt; </td></tr>
+<tr class="memitem:a6fe90935daa557f55d04315d1a7a36a9"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#a6fe90935daa557f55d04315d1a7a36a9">LinkedList</a> (Iter <a class="el" href="classkso_1_1_linked_list.html#ab343c1e07739fdd0ddbf4423a19bfe20">begin</a>, Iter <a class="el" href="classkso_1_1_linked_list.html#a12f75b338f5adc2940bfef7b38939aca">end</a>)</td></tr>
+<tr class="separator:a6fe90935daa557f55d04315d1a7a36a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dce3677c6dc739aeee4628966a8c32d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#a9dce3677c6dc739aeee4628966a8c32d">swap</a> (<a class="el" href="classkso_1_1_linked_list.html">LinkedList</a> &amp;other) noexcept</td></tr>
+<tr class="memdesc:a9dce3677c6dc739aeee4628966a8c32d"><td class="mdescLeft">&#160;</td><td class="mdescRight">交换 *this 和 other 的全部成员。  <a href="classkso_1_1_linked_list.html#a9dce3677c6dc739aeee4628966a8c32d">更多...</a><br /></td></tr>
+<tr class="separator:a9dce3677c6dc739aeee4628966a8c32d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa987ac77cdbff0fbd32ec9534cf476fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#aa987ac77cdbff0fbd32ec9534cf476fd">pushBack</a> (T &amp;&amp;obj)</td></tr>
+<tr class="memdesc:aa987ac77cdbff0fbd32ec9534cf476fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">在后方添加元素。不会无效化任何迭代器。  <a href="classkso_1_1_linked_list.html#aa987ac77cdbff0fbd32ec9534cf476fd">更多...</a><br /></td></tr>
+<tr class="separator:aa987ac77cdbff0fbd32ec9534cf476fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a740d9874dd0c5c5d9d74f96c91a1e976"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#a740d9874dd0c5c5d9d74f96c91a1e976">pushBack</a> (T const &amp;obj)</td></tr>
+<tr class="memdesc:a740d9874dd0c5c5d9d74f96c91a1e976"><td class="mdescLeft">&#160;</td><td class="mdescRight">在后方添加元素。不会无效化任何迭代器。  <a href="classkso_1_1_linked_list.html#a740d9874dd0c5c5d9d74f96c91a1e976">更多...</a><br /></td></tr>
+<tr class="separator:a740d9874dd0c5c5d9d74f96c91a1e976"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a553d976ea5e8e5eba254ff3be48116ba"><td class="memTemplParams" colspan="2">template&lt;typename ArgType &gt; </td></tr>
+<tr class="memitem:a553d976ea5e8e5eba254ff3be48116ba"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#a553d976ea5e8e5eba254ff3be48116ba">push_back</a> (ArgType &amp;&amp;obj)</td></tr>
+<tr class="memdesc:a553d976ea5e8e5eba254ff3be48116ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">等同于pushBack。为兼容STL算法添加。  <a href="classkso_1_1_linked_list.html#a553d976ea5e8e5eba254ff3be48116ba">更多...</a><br /></td></tr>
+<tr class="separator:a553d976ea5e8e5eba254ff3be48116ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1d32fd03a5877edb5a2930633d2f977"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#ac1d32fd03a5877edb5a2930633d2f977">pushFront</a> (T &amp;&amp;obj)</td></tr>
+<tr class="memdesc:ac1d32fd03a5877edb5a2930633d2f977"><td class="mdescLeft">&#160;</td><td class="mdescRight">在前方添加元素。不会无效化任何迭代器。  <a href="classkso_1_1_linked_list.html#ac1d32fd03a5877edb5a2930633d2f977">更多...</a><br /></td></tr>
+<tr class="separator:ac1d32fd03a5877edb5a2930633d2f977"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff5365462152a7e99c95a9b0cf7ace76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#aff5365462152a7e99c95a9b0cf7ace76">pushFront</a> (T const &amp;obj)</td></tr>
+<tr class="memdesc:aff5365462152a7e99c95a9b0cf7ace76"><td class="mdescLeft">&#160;</td><td class="mdescRight">在前方添加元素。不会无效化任何迭代器。  <a href="classkso_1_1_linked_list.html#aff5365462152a7e99c95a9b0cf7ace76">更多...</a><br /></td></tr>
+<tr class="separator:aff5365462152a7e99c95a9b0cf7ace76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a261a32b12a2ae3ea1a3c5ceff31b8057"><td class="memTemplParams" colspan="2">template&lt;typename ArgType &gt; </td></tr>
+<tr class="memitem:a261a32b12a2ae3ea1a3c5ceff31b8057"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#a261a32b12a2ae3ea1a3c5ceff31b8057">push_front</a> (ArgType &amp;&amp;obj)</td></tr>
+<tr class="memdesc:a261a32b12a2ae3ea1a3c5ceff31b8057"><td class="mdescLeft">&#160;</td><td class="mdescRight">等同于pushFront。为兼容STL算法添加。  <a href="classkso_1_1_linked_list.html#a261a32b12a2ae3ea1a3c5ceff31b8057">更多...</a><br /></td></tr>
+<tr class="separator:a261a32b12a2ae3ea1a3c5ceff31b8057"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ec58538ac1d3f9a527e18fd834682fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_linked_list_1_1_iterator.html">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#a5ec58538ac1d3f9a527e18fd834682fb">insertAfter</a> (<a class="el" href="classkso_1_1_linked_list_1_1_const_iterator.html">ConstIterator</a> iter, T &amp;&amp;obj)</td></tr>
+<tr class="memdesc:a5ec58538ac1d3f9a527e18fd834682fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">在迭代器的位置后添加结点。不会无效化任何迭代器。  <a href="classkso_1_1_linked_list.html#a5ec58538ac1d3f9a527e18fd834682fb">更多...</a><br /></td></tr>
+<tr class="separator:a5ec58538ac1d3f9a527e18fd834682fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe349083b315d23c65fae8ae8c1bae62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_linked_list_1_1_iterator.html">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#afe349083b315d23c65fae8ae8c1bae62">insertAfter</a> (<a class="el" href="classkso_1_1_linked_list_1_1_const_iterator.html">ConstIterator</a> iter, T const &amp;obj)</td></tr>
+<tr class="memdesc:afe349083b315d23c65fae8ae8c1bae62"><td class="mdescLeft">&#160;</td><td class="mdescRight">在迭代器的位置后添加结点。不会无效化任何迭代器。  <a href="classkso_1_1_linked_list.html#afe349083b315d23c65fae8ae8c1bae62">更多...</a><br /></td></tr>
+<tr class="separator:afe349083b315d23c65fae8ae8c1bae62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16e61a250bd9bff7e4e7eb14f0ad9557"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_linked_list_1_1_iterator.html">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#a16e61a250bd9bff7e4e7eb14f0ad9557">eraseAfter</a> (<a class="el" href="classkso_1_1_linked_list_1_1_const_iterator.html">ConstIterator</a> iter)</td></tr>
+<tr class="memdesc:a16e61a250bd9bff7e4e7eb14f0ad9557"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除迭代器指向的结点的下一个结点。无效化被删除的结点对应的迭代器。  <a href="classkso_1_1_linked_list.html#a16e61a250bd9bff7e4e7eb14f0ad9557">更多...</a><br /></td></tr>
+<tr class="separator:a16e61a250bd9bff7e4e7eb14f0ad9557"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c2d490b9e7c2f463547c63216189bee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#a1c2d490b9e7c2f463547c63216189bee">clear</a> ()</td></tr>
+<tr class="memdesc:a1c2d490b9e7c2f463547c63216189bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">清空所有元素。  <a href="classkso_1_1_linked_list.html#a1c2d490b9e7c2f463547c63216189bee">更多...</a><br /></td></tr>
+<tr class="separator:a1c2d490b9e7c2f463547c63216189bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba3c4ed3c0b722d8675e939b72c3794d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#aba3c4ed3c0b722d8675e939b72c3794d">size</a> () const</td></tr>
+<tr class="memdesc:aba3c4ed3c0b722d8675e939b72c3794d"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回链表元素个数  <a href="classkso_1_1_linked_list.html#aba3c4ed3c0b722d8675e939b72c3794d">更多...</a><br /></td></tr>
+<tr class="separator:aba3c4ed3c0b722d8675e939b72c3794d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab343c1e07739fdd0ddbf4423a19bfe20"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_linked_list_1_1_iterator.html">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#ab343c1e07739fdd0ddbf4423a19bfe20">begin</a> ()</td></tr>
+<tr class="separator:ab343c1e07739fdd0ddbf4423a19bfe20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afba22a172348aed41e7785a24274593e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_linked_list_1_1_const_iterator.html">ConstIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#afba22a172348aed41e7785a24274593e">begin</a> () const</td></tr>
+<tr class="separator:afba22a172348aed41e7785a24274593e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc44826f5b41903ef207140cd09b6b13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_linked_list_1_1_const_iterator.html">ConstIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#afc44826f5b41903ef207140cd09b6b13">cbegin</a> () const</td></tr>
+<tr class="separator:afc44826f5b41903ef207140cd09b6b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12f75b338f5adc2940bfef7b38939aca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_linked_list_1_1_iterator.html">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#a12f75b338f5adc2940bfef7b38939aca">end</a> ()</td></tr>
+<tr class="separator:a12f75b338f5adc2940bfef7b38939aca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa23573ced0e540be757dace8e1eecb10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_linked_list_1_1_const_iterator.html">ConstIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#aa23573ced0e540be757dace8e1eecb10">end</a> () const</td></tr>
+<tr class="separator:aa23573ced0e540be757dace8e1eecb10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a16c00a7ccb0c8f10f312d15705194d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_linked_list_1_1_const_iterator.html">ConstIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#a9a16c00a7ccb0c8f10f312d15705194d">cend</a> () const</td></tr>
+<tr class="separator:a9a16c00a7ccb0c8f10f312d15705194d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9569cb0d5d53684307d1f3ad277e16e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_linked_list_1_1_iterator.html">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#aa9569cb0d5d53684307d1f3ad277e16e">beforeBegin</a> ()</td></tr>
+<tr class="separator:aa9569cb0d5d53684307d1f3ad277e16e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f80f65a70ea7da64279726e109623a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_linked_list_1_1_const_iterator.html">ConstIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#a4f80f65a70ea7da64279726e109623a0">beforeBegin</a> () const</td></tr>
+<tr class="separator:a4f80f65a70ea7da64279726e109623a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae17f7d03a61d8e0bddd60ac06b769b15"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_linked_list_1_1_const_iterator.html">ConstIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#ae17f7d03a61d8e0bddd60ac06b769b15">cbeforeBegin</a> () const</td></tr>
+<tr class="separator:ae17f7d03a61d8e0bddd60ac06b769b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addae21c938403e2337cb59157a879860"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_linked_list_1_1_iterator.html">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#addae21c938403e2337cb59157a879860">beforeEnd</a> ()</td></tr>
+<tr class="separator:addae21c938403e2337cb59157a879860"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1671bb14df23df9eb0f0cf341ac26dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_linked_list_1_1_const_iterator.html">ConstIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#ad1671bb14df23df9eb0f0cf341ac26dd">beforeEnd</a> () const</td></tr>
+<tr class="separator:ad1671bb14df23df9eb0f0cf341ac26dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa65bb6e44ee56eaf020c1335a0e16566"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_linked_list_1_1_const_iterator.html">ConstIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#aa65bb6e44ee56eaf020c1335a0e16566">cbeforeEnd</a> () const</td></tr>
+<tr class="separator:aa65bb6e44ee56eaf020c1335a0e16566"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+class kso::LinkedList&lt; T &gt;</div><p >链表类。提供基于迭代器的接口，内部实现为单链表。 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>存储的元素 </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a575eec21e162b3182df675bd14ac858a" name="a575eec21e162b3182df675bd14ac858a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a575eec21e162b3182df675bd14ac858a">&#9670;&nbsp;</a></span>LinkedList() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::LinkedList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>默认构造。构造空链表 </p>
+
+</div>
+</div>
+<a id="af9aa5c9a61ce3b8b8065cd439e8f3cc4" name="af9aa5c9a61ce3b8b8065cd439e8f3cc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9aa5c9a61ce3b8b8065cd439e8f3cc4">&#9670;&nbsp;</a></span>LinkedList() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::LinkedList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_linked_list.html">LinkedList</a>&lt; T &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>拷贝构造。该操作使源中的每个元素被拷贝到本对象中。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>源 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab5ad31bf99e0912cf8d7825e697231b9" name="ab5ad31bf99e0912cf8d7825e697231b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5ad31bf99e0912cf8d7825e697231b9">&#9670;&nbsp;</a></span>LinkedList() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::LinkedList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_linked_list.html">LinkedList</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>移动构造。该操作使源中的元素移动到本对象中。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>源 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a547c57b7ed71b3f6f9362746aa978d06" name="a547c57b7ed71b3f6f9362746aa978d06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a547c57b7ed71b3f6f9362746aa978d06">&#9670;&nbsp;</a></span>~LinkedList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::~<a class="el" href="classkso_1_1_linked_list.html">LinkedList</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>析构函数 </p>
+
+</div>
+</div>
+<a id="a6fe90935daa557f55d04315d1a7a36a9" name="a6fe90935daa557f55d04315d1a7a36a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fe90935daa557f55d04315d1a7a36a9">&#9670;&nbsp;</a></span>LinkedList() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename Iter &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::LinkedList </td>
+          <td>(</td>
+          <td class="paramtype">Iter&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Iter&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="aa9569cb0d5d53684307d1f3ad277e16e" name="aa9569cb0d5d53684307d1f3ad277e16e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9569cb0d5d53684307d1f3ad277e16e">&#9670;&nbsp;</a></span>beforeBegin() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_linked_list_1_1_iterator.html">Iterator</a> <a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::beforeBegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4f80f65a70ea7da64279726e109623a0" name="a4f80f65a70ea7da64279726e109623a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f80f65a70ea7da64279726e109623a0">&#9670;&nbsp;</a></span>beforeBegin() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_linked_list_1_1_const_iterator.html">ConstIterator</a> <a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::beforeBegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="addae21c938403e2337cb59157a879860" name="addae21c938403e2337cb59157a879860"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addae21c938403e2337cb59157a879860">&#9670;&nbsp;</a></span>beforeEnd() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_linked_list_1_1_iterator.html">Iterator</a> <a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::beforeEnd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad1671bb14df23df9eb0f0cf341ac26dd" name="ad1671bb14df23df9eb0f0cf341ac26dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1671bb14df23df9eb0f0cf341ac26dd">&#9670;&nbsp;</a></span>beforeEnd() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_linked_list_1_1_const_iterator.html">ConstIterator</a> <a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::beforeEnd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab343c1e07739fdd0ddbf4423a19bfe20" name="ab343c1e07739fdd0ddbf4423a19bfe20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab343c1e07739fdd0ddbf4423a19bfe20">&#9670;&nbsp;</a></span>begin() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_linked_list_1_1_iterator.html">Iterator</a> <a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afba22a172348aed41e7785a24274593e" name="afba22a172348aed41e7785a24274593e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afba22a172348aed41e7785a24274593e">&#9670;&nbsp;</a></span>begin() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_linked_list_1_1_const_iterator.html">ConstIterator</a> <a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae17f7d03a61d8e0bddd60ac06b769b15" name="ae17f7d03a61d8e0bddd60ac06b769b15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae17f7d03a61d8e0bddd60ac06b769b15">&#9670;&nbsp;</a></span>cbeforeBegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_linked_list_1_1_const_iterator.html">ConstIterator</a> <a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::cbeforeBegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa65bb6e44ee56eaf020c1335a0e16566" name="aa65bb6e44ee56eaf020c1335a0e16566"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa65bb6e44ee56eaf020c1335a0e16566">&#9670;&nbsp;</a></span>cbeforeEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_linked_list_1_1_const_iterator.html">ConstIterator</a> <a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::cbeforeEnd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc44826f5b41903ef207140cd09b6b13" name="afc44826f5b41903ef207140cd09b6b13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc44826f5b41903ef207140cd09b6b13">&#9670;&nbsp;</a></span>cbegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_linked_list_1_1_const_iterator.html">ConstIterator</a> <a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::cbegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9a16c00a7ccb0c8f10f312d15705194d" name="a9a16c00a7ccb0c8f10f312d15705194d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a16c00a7ccb0c8f10f312d15705194d">&#9670;&nbsp;</a></span>cend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_linked_list_1_1_const_iterator.html">ConstIterator</a> <a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::cend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c2d490b9e7c2f463547c63216189bee" name="a1c2d490b9e7c2f463547c63216189bee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c2d490b9e7c2f463547c63216189bee">&#9670;&nbsp;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>清空所有元素。 </p>
+
+</div>
+</div>
+<a id="a12f75b338f5adc2940bfef7b38939aca" name="a12f75b338f5adc2940bfef7b38939aca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12f75b338f5adc2940bfef7b38939aca">&#9670;&nbsp;</a></span>end() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_linked_list_1_1_iterator.html">Iterator</a> <a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa23573ced0e540be757dace8e1eecb10" name="aa23573ced0e540be757dace8e1eecb10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa23573ced0e540be757dace8e1eecb10">&#9670;&nbsp;</a></span>end() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_linked_list_1_1_const_iterator.html">ConstIterator</a> <a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a16e61a250bd9bff7e4e7eb14f0ad9557" name="a16e61a250bd9bff7e4e7eb14f0ad9557"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16e61a250bd9bff7e4e7eb14f0ad9557">&#9670;&nbsp;</a></span>eraseAfter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_linked_list_1_1_iterator.html">Iterator</a> <a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::eraseAfter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_linked_list_1_1_const_iterator.html">ConstIterator</a>&#160;</td>
+          <td class="paramname"><em>iter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>删除迭代器指向的结点的下一个结点。无效化被删除的结点对应的迭代器。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iter</td><td>目标迭代器 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>指向原链表中被删结点的下一个结点的迭代器 </dd></dl>
+
+</div>
+</div>
+<a id="a5ec58538ac1d3f9a527e18fd834682fb" name="a5ec58538ac1d3f9a527e18fd834682fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ec58538ac1d3f9a527e18fd834682fb">&#9670;&nbsp;</a></span>insertAfter() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_linked_list_1_1_iterator.html">Iterator</a> <a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::insertAfter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_linked_list_1_1_const_iterator.html">ConstIterator</a>&#160;</td>
+          <td class="paramname"><em>iter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T &amp;&amp;&#160;</td>
+          <td class="paramname"><em>obj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在迭代器的位置后添加结点。不会无效化任何迭代器。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iter</td><td>目标迭代器 </td></tr>
+    <tr><td class="paramname">obj</td><td>目标元素 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>指向新结点的迭代器 </dd></dl>
+
+</div>
+</div>
+<a id="afe349083b315d23c65fae8ae8c1bae62" name="afe349083b315d23c65fae8ae8c1bae62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe349083b315d23c65fae8ae8c1bae62">&#9670;&nbsp;</a></span>insertAfter() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_linked_list_1_1_iterator.html">Iterator</a> <a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::insertAfter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_linked_list_1_1_const_iterator.html">ConstIterator</a>&#160;</td>
+          <td class="paramname"><em>iter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T const &amp;&#160;</td>
+          <td class="paramname"><em>obj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在迭代器的位置后添加结点。不会无效化任何迭代器。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iter</td><td>目标迭代器 </td></tr>
+    <tr><td class="paramname">obj</td><td>目标元素 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>指向新结点的迭代器 </dd></dl>
+
+</div>
+</div>
+<a id="aee638486646929acca59b05a4385b1fa" name="aee638486646929acca59b05a4385b1fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee638486646929acca59b05a4385b1fa">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_linked_list.html">LinkedList</a> &amp; <a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_linked_list.html">LinkedList</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>移动赋值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>源。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5d77e6b3dacb234d34f08a18abab9d90" name="a5d77e6b3dacb234d34f08a18abab9d90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d77e6b3dacb234d34f08a18abab9d90">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_linked_list.html">LinkedList</a> &amp; <a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_linked_list.html">LinkedList</a>&lt; T &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>拷贝赋值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>源。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a553d976ea5e8e5eba254ff3be48116ba" name="a553d976ea5e8e5eba254ff3be48116ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a553d976ea5e8e5eba254ff3be48116ba">&#9670;&nbsp;</a></span>push_back()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename ArgType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::push_back </td>
+          <td>(</td>
+          <td class="paramtype">ArgType &amp;&amp;&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>等同于pushBack。为兼容STL算法添加。 </p>
+
+</div>
+</div>
+<a id="a261a32b12a2ae3ea1a3c5ceff31b8057" name="a261a32b12a2ae3ea1a3c5ceff31b8057"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a261a32b12a2ae3ea1a3c5ceff31b8057">&#9670;&nbsp;</a></span>push_front()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename ArgType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::push_front </td>
+          <td>(</td>
+          <td class="paramtype">ArgType &amp;&amp;&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>等同于pushFront。为兼容STL算法添加。 </p>
+
+</div>
+</div>
+<a id="aa987ac77cdbff0fbd32ec9534cf476fd" name="aa987ac77cdbff0fbd32ec9534cf476fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa987ac77cdbff0fbd32ec9534cf476fd">&#9670;&nbsp;</a></span>pushBack() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::pushBack </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&amp;&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在后方添加元素。不会无效化任何迭代器。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>目标元素 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a740d9874dd0c5c5d9d74f96c91a1e976" name="a740d9874dd0c5c5d9d74f96c91a1e976"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a740d9874dd0c5c5d9d74f96c91a1e976">&#9670;&nbsp;</a></span>pushBack() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::pushBack </td>
+          <td>(</td>
+          <td class="paramtype">T const &amp;&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在后方添加元素。不会无效化任何迭代器。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>目标元素 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac1d32fd03a5877edb5a2930633d2f977" name="ac1d32fd03a5877edb5a2930633d2f977"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1d32fd03a5877edb5a2930633d2f977">&#9670;&nbsp;</a></span>pushFront() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::pushFront </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&amp;&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在前方添加元素。不会无效化任何迭代器。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>目标元素 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aff5365462152a7e99c95a9b0cf7ace76" name="aff5365462152a7e99c95a9b0cf7ace76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff5365462152a7e99c95a9b0cf7ace76">&#9670;&nbsp;</a></span>pushFront() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::pushFront </td>
+          <td>(</td>
+          <td class="paramtype">T const &amp;&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在前方添加元素。不会无效化任何迭代器。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>目标元素 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aba3c4ed3c0b722d8675e939b72c3794d" name="aba3c4ed3c0b722d8675e939b72c3794d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba3c4ed3c0b722d8675e939b72c3794d">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>返回链表元素个数 </p>
+
+</div>
+</div>
+<a id="a9dce3677c6dc739aeee4628966a8c32d" name="a9dce3677c6dc739aeee4628966a8c32d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dce3677c6dc739aeee4628966a8c32d">&#9670;&nbsp;</a></span>swap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classkso_1_1_linked_list.html">kso::LinkedList</a>&lt; T &gt;::swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_linked_list.html">LinkedList</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>交换 *this 和 other 的全部成员。 </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/<a class="el" href="_kso_linked_list_8h.html">KsoLinkedList.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacekso.html">kso</a></li><li class="navelem"><a class="el" href="classkso_1_1_linked_list.html">LinkedList</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+</body>
+</html>
