@@ -63,9 +63,4 @@ var menudata={children:[
 {text:"~",url:"functions_func.html#index__7E"}]},
 {text:"变量",url:"functions_vars.html"},
 {text:"类型定义",url:"functions_type.html"},
-{text:"相关函数",url:"functions_rela.html"}]}]},
-{text:"文件",url:"files.html",children:[
-{text:"文件列表",url:"files.html"},
-{text:"文件成员",url:"globals.html",children:[
-{text:"全部",url:"globals.html"},
-{text:"宏定义",url:"globals_defs.html"}]}]}]}
+{text:"相关函数",url:"functions_rela.html"}]}]}]}

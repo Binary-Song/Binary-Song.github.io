@@ -24,7 +24,27 @@
 */
 var NAVTREE =
 [
-  [ "KSO Containers", "index.html", [
+  [ "Week 2 Task: KSO Containers", "index.html", [
+    [ "Week 02 作业", "index.html", [
+      [ "项目概述", "index.html#autotoc_md1", null ],
+      [ "项目特点", "index.html#autotoc_md2", [
+        [ "1. 兼容标准库算法", "index.html#autotoc_md3", null ],
+        [ "2. 提供安全性检查", "index.html#autotoc_md4", null ],
+        [ "3. 集成多种开发工具", "index.html#autotoc_md5", null ]
+      ] ],
+      [ "调用本库", "index.html#autotoc_md6", [
+        [ "API 文档", "index.html#autotoc_md7", null ]
+      ] ],
+      [ "运行单元测试 (Windows 平台)", "index.html#autotoc_md8", null ],
+      [ "运行单元测试、覆盖率和内存泄漏检测（Linux 平台）", "index.html#autotoc_md9", [
+        [ "安装依赖", "index.html#autotoc_md10", null ],
+        [ "构建", "index.html#autotoc_md11", null ],
+        [ "运行单元测试", "index.html#autotoc_md12", null ],
+        [ "运行覆盖率检测", "index.html#autotoc_md13", null ],
+        [ "运行内存检测", "index.html#autotoc_md14", null ]
+      ] ],
+      [ "实现细节", "index.html#autotoc_md15", null ]
+    ] ],
     [ "命名空间", "namespaces.html", [
       [ "命名空间列表", "namespaces.html", "namespaces_dup" ]
     ] ],
@@ -38,21 +58,14 @@ var NAVTREE =
         [ "类型定义", "functions_type.html", null ],
         [ "相关函数", "functions_rela.html", null ]
       ] ]
-    ] ],
-    [ "文件", "files.html", [
-      [ "文件列表", "files.html", "files_dup" ],
-      [ "文件成员", "globals.html", [
-        [ "全部", "globals.html", null ],
-        [ "宏定义", "globals_defs.html", null ]
-      ] ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"_kso_linked_list_8h.html",
-"classkso_1_1_string_1_1_const_iterator.html#a22692fb7bacbbbd1d3e4c8c2ef2d4b6d"
+"annotated.html",
+"classkso_1_1_string_1_1_const_iterator.html#a5448f0fa2804c56d9111d097f064a115"
 ];
 
 var SYNCONMSG = '点击 关闭 面板同步';

@@ -1,0 +1,385 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Week 1 Task: kso::LinkedList类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Week 1 Task
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classkso_1_1_linked_list.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="#friends">友元</a> &#124;
+<a href="classkso_1_1_linked_list-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">kso::LinkedList类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>封装单链表。使用RAII和Rule of 5确保内存正确释放。  
+ <a href="classkso_1_1_linked_list.html#details">更多...</a></p>
+
+<p><code>#include &lt;reversekgroup.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a4c1425b709eae9cd7e16ac72dd72c888"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#a4c1425b709eae9cd7e16ac72dd72c888">LinkedList</a> ()=default</td></tr>
+<tr class="memdesc:a4c1425b709eae9cd7e16ac72dd72c888"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认构造。创建空链表  <a href="classkso_1_1_linked_list.html#a4c1425b709eae9cd7e16ac72dd72c888">更多...</a><br /></td></tr>
+<tr class="separator:a4c1425b709eae9cd7e16ac72dd72c888"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8461f9f4369cac7bdb508cf792ffb024"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#a8461f9f4369cac7bdb508cf792ffb024">LinkedList</a> (<a class="el" href="classkso_1_1_linked_list.html">LinkedList</a> const &amp;other)</td></tr>
+<tr class="memdesc:a8461f9f4369cac7bdb508cf792ffb024"><td class="mdescLeft">&#160;</td><td class="mdescRight">拷贝构造。拷贝链表中的每个元素  <a href="classkso_1_1_linked_list.html#a8461f9f4369cac7bdb508cf792ffb024">更多...</a><br /></td></tr>
+<tr class="separator:a8461f9f4369cac7bdb508cf792ffb024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeb55c8c0adae92d7858e04fcf5afcef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#abeb55c8c0adae92d7858e04fcf5afcef">~LinkedList</a> ()</td></tr>
+<tr class="separator:abeb55c8c0adae92d7858e04fcf5afcef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5c63921cc8a358c12569e8807022526"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#ac5c63921cc8a358c12569e8807022526">LinkedList</a> (<a class="el" href="classkso_1_1_linked_list.html">LinkedList</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:ac5c63921cc8a358c12569e8807022526"><td class="mdescLeft">&#160;</td><td class="mdescRight">移动构造。将other的数据移动到*this，使other无效化  <a href="classkso_1_1_linked_list.html#ac5c63921cc8a358c12569e8807022526">更多...</a><br /></td></tr>
+<tr class="separator:ac5c63921cc8a358c12569e8807022526"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb066927939eb62d9823b5218149d1d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_linked_list.html">LinkedList</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#adb066927939eb62d9823b5218149d1d7">operator=</a> (<a class="el" href="classkso_1_1_linked_list.html">LinkedList</a> other)</td></tr>
+<tr class="memdesc:adb066927939eb62d9823b5218149d1d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">拷贝赋值（other为左值）或移动赋值（other为右值）  <a href="classkso_1_1_linked_list.html#adb066927939eb62d9823b5218149d1d7">更多...</a><br /></td></tr>
+<tr class="separator:adb066927939eb62d9823b5218149d1d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0fe61b33c3575c69510a630026eed43"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#ac0fe61b33c3575c69510a630026eed43">LinkedList</a> (std::vector&lt; int &gt; const &amp;data)</td></tr>
+<tr class="memdesc:ac0fe61b33c3575c69510a630026eed43"><td class="mdescLeft">&#160;</td><td class="mdescRight">用 data 中的数据创建链表  <a href="classkso_1_1_linked_list.html#ac0fe61b33c3575c69510a630026eed43">更多...</a><br /></td></tr>
+<tr class="separator:ac0fe61b33c3575c69510a630026eed43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ea0b4d1f3ee3243488b0acbdeafa883"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#a8ea0b4d1f3ee3243488b0acbdeafa883">swap</a> (<a class="el" href="classkso_1_1_linked_list.html">LinkedList</a> &amp;other) noexcept</td></tr>
+<tr class="memdesc:a8ea0b4d1f3ee3243488b0acbdeafa883"><td class="mdescLeft">&#160;</td><td class="mdescRight">交换 *this 和 other 的内容  <a href="classkso_1_1_linked_list.html#a8ea0b4d1f3ee3243488b0acbdeafa883">更多...</a><br /></td></tr>
+<tr class="separator:a8ea0b4d1f3ee3243488b0acbdeafa883"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a2c88a4cacc71a73a674f8fc3c39db32f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structkso_1_1_link_node.html">LinkNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#a2c88a4cacc71a73a674f8fc3c39db32f">head</a> = nullptr</td></tr>
+<tr class="memdesc:a2c88a4cacc71a73a674f8fc3c39db32f"><td class="mdescLeft">&#160;</td><td class="mdescRight">链表的头指针  <a href="classkso_1_1_linked_list.html#a2c88a4cacc71a73a674f8fc3c39db32f">更多...</a><br /></td></tr>
+<tr class="separator:a2c88a4cacc71a73a674f8fc3c39db32f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:aba20030e6f6a2d01094e65d1bc55daa6"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_linked_list.html#aba20030e6f6a2d01094e65d1bc55daa6">operator&lt;&lt;</a> (std::ostream &amp;stream, <a class="el" href="classkso_1_1_linked_list.html">LinkedList</a> const &amp;list)</td></tr>
+<tr class="memdesc:aba20030e6f6a2d01094e65d1bc55daa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">格式化输出链表  <a href="classkso_1_1_linked_list.html#aba20030e6f6a2d01094e65d1bc55daa6">更多...</a><br /></td></tr>
+<tr class="separator:aba20030e6f6a2d01094e65d1bc55daa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >封装单链表。使用RAII和Rule of 5确保内存正确释放。 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a4c1425b709eae9cd7e16ac72dd72c888" name="a4c1425b709eae9cd7e16ac72dd72c888"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c1425b709eae9cd7e16ac72dd72c888">&#9670;&nbsp;</a></span>LinkedList() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">kso::LinkedList::LinkedList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>默认构造。创建空链表 </p>
+
+</div>
+</div>
+<a id="a8461f9f4369cac7bdb508cf792ffb024" name="a8461f9f4369cac7bdb508cf792ffb024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8461f9f4369cac7bdb508cf792ffb024">&#9670;&nbsp;</a></span>LinkedList() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">kso::LinkedList::LinkedList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_linked_list.html">LinkedList</a> const &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>拷贝构造。拷贝链表中的每个元素 </p>
+
+</div>
+</div>
+<a id="abeb55c8c0adae92d7858e04fcf5afcef" name="abeb55c8c0adae92d7858e04fcf5afcef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abeb55c8c0adae92d7858e04fcf5afcef">&#9670;&nbsp;</a></span>~LinkedList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">kso::LinkedList::~LinkedList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac5c63921cc8a358c12569e8807022526" name="ac5c63921cc8a358c12569e8807022526"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5c63921cc8a358c12569e8807022526">&#9670;&nbsp;</a></span>LinkedList() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">kso::LinkedList::LinkedList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_linked_list.html">LinkedList</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>移动构造。将other的数据移动到*this，使other无效化 </p>
+
+</div>
+</div>
+<a id="ac0fe61b33c3575c69510a630026eed43" name="ac0fe61b33c3575c69510a630026eed43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0fe61b33c3575c69510a630026eed43">&#9670;&nbsp;</a></span>LinkedList() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">kso::LinkedList::LinkedList </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; int &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>用 data 中的数据创建链表 </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="adb066927939eb62d9823b5218149d1d7" name="adb066927939eb62d9823b5218149d1d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb066927939eb62d9823b5218149d1d7">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_linked_list.html">LinkedList</a> &amp; kso::LinkedList::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_linked_list.html">LinkedList</a>&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>拷贝赋值（other为左值）或移动赋值（other为右值） </p>
+
+</div>
+</div>
+<a id="a8ea0b4d1f3ee3243488b0acbdeafa883" name="a8ea0b4d1f3ee3243488b0acbdeafa883"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ea0b4d1f3ee3243488b0acbdeafa883">&#9670;&nbsp;</a></span>swap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kso::LinkedList::swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_linked_list.html">LinkedList</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>交换 *this 和 other 的内容 </p>
+
+</div>
+</div>
+<h2 class="groupheader">友元及相关函数文档</h2>
+<a id="aba20030e6f6a2d01094e65d1bc55daa6" name="aba20030e6f6a2d01094e65d1bc55daa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba20030e6f6a2d01094e65d1bc55daa6">&#9670;&nbsp;</a></span>operator&lt;&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_linked_list.html">LinkedList</a> const &amp;&#160;</td>
+          <td class="paramname"><em>list</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>格式化输出链表 </p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a2c88a4cacc71a73a674f8fc3c39db32f" name="a2c88a4cacc71a73a674f8fc3c39db32f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c88a4cacc71a73a674f8fc3c39db32f">&#9670;&nbsp;</a></span>head</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structkso_1_1_link_node.html">LinkNode</a>* kso::LinkedList::head = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>链表的头指针 </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>ReverseKGroup/reversekgroup.h</li>
+<li>ReverseKGroup/reversekgroup.cpp</li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacekso.html">kso</a></li><li class="navelem"><a class="el" href="classkso_1_1_linked_list.html">LinkedList</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+</body>
+</html>

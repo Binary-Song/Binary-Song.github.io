@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>KSO Containers: 首页</title>
+<title>Week 2 Task: KSO Containers: Week 02 作业</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,7 +18,6 @@
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">KSO Containers
+   <div id="projectname">Week 2 Task: KSO Containers
    </div>
   </td>
  </tr>
@@ -83,10 +82,155 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </iframe>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">KSO Containers 文档</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">Week 02 作业 </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p ><a class="anchor" id="md_README"></a> </p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+项目概述</h1>
+<p >项目的主体是 <b>KSO模板容器库</b> 。它实现了2种容器：链表（KsoLinkedList.h）和基于链表的字符串（KsoString.h）。该库是纯头文件库，不需要编译即可使用，且可以跨平台。</p>
+<p >此外，项目还包含以下工具来对KSO模板容器进行测试：</p>
+<ul>
+<li>单元测试</li>
+<li>代码覆盖率检测</li>
+<li>内存泄漏检测</li>
+</ul>
+<p >其中，单元测试可以在 Windows 和 Linux 平台编译运行，而代码覆盖率和内存泄漏检测只支持在 Linux 下执行。</p>
+<p >项目使用 CMake 管理。</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+项目特点</h1>
+<h2><a class="anchor" id="autotoc_md3"></a>
+1. 兼容标准库算法</h2>
+<p ><code><a class="el" href="classkso_1_1_linked_list.html" title="链表类。提供基于迭代器的接口，内部实现为单链表。">kso::LinkedList</a>&lt;T&gt;</code> 和 <code><a class="el" href="classkso_1_1_string.html" title="字符串">kso::String</a>&lt;T&gt;</code> 均提供迭代器接口，可以和STL算法兼容。示例： <br  />
+</p>
+<div class="fragment"><div class="line"> {c++}</div>
+<div class="line">#include &lt;algorithm&gt;</div>
+<div class="line">#include &quot;KsoString.h&quot;</div>
+<div class="line"> </div>
+<div class="line">int main()</div>
+<div class="line">{</div>
+<div class="line">    kso::String str(&quot;9456182370&quot;);</div>
+<div class="line">    std::sort(str.begin(), str.end()); // 标准库的排序算法</div>
+<div class="line">    std::cout &lt;&lt; str &lt;&lt; std::endl; </div>
+<div class="line">}</div>
+</div><!-- fragment --><p >输出：</p>
+<div class="fragment"><div class="line">0123456789</div>
+</div><!-- fragment --><p ><code><a class="el" href="classkso_1_1_linked_list.html" title="链表类。提供基于迭代器的接口，内部实现为单链表。">kso::LinkedList</a>&lt;T&gt;::Iterator</code> 实现了标准库 <em>ForwardIterator</em> ，<code><a class="el" href="classkso_1_1_string.html" title="字符串">kso::String</a>&lt;T&gt;::Iterator</code> 实现了标准库 <em>RandomAccessIterator</em> 。</p>
+<h2><a class="anchor" id="autotoc_md4"></a>
+2. 提供安全性检查</h2>
+<p ><code><a class="el" href="classkso_1_1_linked_list.html" title="链表类。提供基于迭代器的接口，内部实现为单链表。">kso::LinkedList</a>&lt;T&gt;</code> 和 <code><a class="el" href="classkso_1_1_string.html" title="字符串">kso::String</a>&lt;T&gt;</code> 均提供安全性检查，默认在Debug模式下开启，在Release模式下关闭。也可以通过定义宏：<code>KSO_SAFETY_CHECKED</code> 等于 <code>0</code> 或 <code>1</code> 来强制开启或关闭安全检查。</p>
+<p >安全检查开启后，所有的索引值和迭代器的非法使用（包括超出范围、迭代器失效等情况）都会报错，而不是产生未定义行为。</p>
+<p >例如，在开启安全检查时，执行如下代码</p>
+<div class="fragment"><div class="line"> {c++}</div>
+<div class="line">#include &quot;KsoString.h&quot;</div>
+<div class="line"> </div>
+<div class="line">int main()</div>
+<div class="line">{</div>
+<div class="line">    kso::String&lt;char&gt; str(&quot;hello world&quot;);</div>
+<div class="line">    str.erase(-1);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> 会出现如下错误提示：</p>
+<div class="fragment"><div class="line">error: index out of range</div>
+</div><!-- fragment --><p >再例如，执行如下代码：</p>
+<div class="fragment"><div class="line"> {c++}</div>
+<div class="line">#include &quot;KsoLinkedList.h&quot;</div>
+<div class="line"> </div>
+<div class="line">int main()</div>
+<div class="line">{</div>
+<div class="line">    std::string str = &quot;hello&quot;;</div>
+<div class="line">    kso::LinkedList&lt;char&gt; list(str.begin(), str.end()); // 创建字符串链表，内容是&quot;hello&quot;</div>
+<div class="line">    auto i = list.begin(); // i 是迭代器，指向第一个元素</div>
+<div class="line">    list.eraseAfter(list.beforeBegin()); // 删除第一个元素</div>
+<div class="line">    std::cout &lt;&lt; *i &lt;&lt; std::endl; // 尝试使用 i </div>
+<div class="line">}</div>
+</div><!-- fragment --><p >会出现如下错误提示：</p>
+<div class="fragment"><div class="line">error: usage of expired iterator</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md5"></a>
+3. 集成多种开发工具</h2>
+<p >包括 API文档、单元测试、内存泄漏检测和覆盖率检测。详见下文说明。</p>
+<h1><a class="anchor" id="autotoc_md6"></a>
+调用本库</h1>
+<p >将 yangerhang/week02/include 加入包含目录即可调用。</p>
+<p >要开启安全模式（默认仅在Debug模式开启），请在编译选项中添加宏定义：KSO_SAFETY_CHECKED=1</p>
+<h2><a class="anchor" id="autotoc_md7"></a>
+API 文档</h2>
+<p >查询 API 文档，请访问</p>
+<p ><a href="https://binary-song.github.io/kso/week02/index.html">week02 API 文档</a></p>
+<h1><a class="anchor" id="autotoc_md8"></a>
+运行单元测试 (Windows 平台)</h1>
+<p >单元测试可以在 Windows 和 Linux 平台编译和运行。单元测试基于 Boost.Test 框架编写，因此需要事先下载 Boost 源码（**不需要编译 Boost**）。下面将分平台详细说明。</p>
+<p >开始之前需要安装 Visual Studio “C++ 桌面开发” 工作负载和 CMake。在官方网站下载安装即可。这里只介绍如何配置 Boost 。</p>
+<p >1.在 <a href="https://www.boost.org/">https://www.boost.org/</a> 下载 Boost 源码后解压</p>
+<p >2.假设解压到 D:/，如图所示：</p>
+<p ><img src="images/2022-05-02-11-36-08.png" alt="" width="300" class="inline"/></p>
+<p >3.右击此电脑 → 属性 → 高级系统设置 → 环境变量</p>
+<p >4.在用户变量中新建变量。变量一栏填写<code>BOOST_ROOT</code>，值一栏填写 Boost 的根目录，如图：</p>
+<p ><img src="images/2022-05-02-11-39-08.png" alt="" width="300" class="inline"/></p>
+<p >5.按 Win+R 输入 cmd 启动命令行，**在 yangerhang/week02 运行** </p><div class="fragment"><div class="line">cmake -S . -B build</div>
+</div><!-- fragment --><p> <img src="images/2022-05-02-12-24-57.png" alt="" width="650" class="inline"/></p>
+<p >6.完成后， CMake 将在 yangerhang/week02/build 目录生成 Visual Studio 工程。执行以下指令编译单元测试（也可用 Visual Studio 编译）： </p><div class="fragment"><div class="line">cd build</div>
+<div class="line">cmake --build .</div>
+</div><!-- fragment --><p >7.编译完成后，执行以下指令运行单元测试： </p><div class="fragment"><div class="line">ctest</div>
+</div><!-- fragment --><p >执行效果如图：</p>
+<p ><img src="images/2022-05-02-12-27-19.png" alt="" width="650" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md9"></a>
+运行单元测试、覆盖率和内存泄漏检测（Linux 平台）</h1>
+<p >这里以 Ubuntu 20.04 LTS 为例，演示如何在 Linux 平台 执行单元测试、覆盖率和内存检测。</p>
+<h2><a class="anchor" id="autotoc_md10"></a>
+安装依赖</h2>
+<p >1.安装 gcc、CMake 和 Valgrind（内存检测工具） </p><div class="fragment"><div class="line">sudo apt update</div>
+<div class="line">sudo apt install build-essential cmake valgrind</div>
+</div><!-- fragment --><p >2.安装 gcovr。该工具能处理 gcov 的输出，生成 html 格式的覆盖率报告。该工具由 Python 写成，需要安装 pip 来获取。 </p><div class="fragment"><div class="line">sudo apt install python3-pip</div>
+<div class="line">pip install gcovr</div>
+</div><!-- fragment --><p >3.安装 Boost </p><div class="fragment"><div class="line">sudo apt-get install libboost-all-dev</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md11"></a>
+构建</h2>
+<p >1.**在 yangerhang/week02 运行** </p><div class="fragment"><div class="line">cmake -S . -B build</div>
+</div><!-- fragment --><p> 完成后，可以在 yangerhang/week02/build 文件夹找到 CMakeCache.txt</p>
+<p >2.默认情况下，覆盖率和内存泄漏检测均处于关闭状态，需要手动开启。用文本编辑器（这里使用vi）打开 CMakeCache.txt：</p>
+<div class="fragment"><div class="line">vim  build/CMakeCache.txt</div>
+</div><!-- fragment --><p >将</p>
+<div class="fragment"><div class="line">BUILD_COVERAGE:BOOL=OFF</div>
+<div class="line">BUILD_MEMCHECK:BOOL=OFF</div>
+</div><!-- fragment --><p >改为 <br  />
+</p>
+<div class="fragment"><div class="line">BUILD_COVERAGE:BOOL=ON</div>
+<div class="line">BUILD_MEMCHECK:BOOL=ON</div>
+</div><!-- fragment --><p >如图：</p>
+<p ><img src="images/2022-05-02-12-59-10.png" alt="" width="650" class="inline"/></p>
+<p >3.再次**在 yangerhang/week02 运行**：</p>
+<div class="fragment"><div class="line">cmake -S . -B build</div>
+</div><!-- fragment --><p >4.编译 </p><div class="fragment"><div class="line">cd build</div>
+<div class="line">cmake --build .</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md12"></a>
+运行单元测试</h2>
+<p >执行：</p>
+<div class="fragment"><div class="line">ctest</div>
+</div><!-- fragment --><p >效果如图：</p>
+<p ><img src="images/2022-05-02-13-50-02.png" alt="" width="650" class="inline"/></p>
+<p >图中包含四个测试：<code>Test_LinkedList_Unchecked</code>、<code>Test_LinkedList_Checked</code>、<code>Test_String_Unchecked</code>、<code>Test_String_Checked</code>。以<code>_Checked</code>结尾的测试开启了安全检查，反之则关闭。</p>
+<h2><a class="anchor" id="autotoc_md13"></a>
+运行覆盖率检测</h2>
+<p >执行：</p>
+<div class="fragment"><div class="line">cmake --build . --target CodeCov</div>
+</div><!-- fragment --><p >运行成功后，可以在 build/CodeCov 文件夹下找到 index.html。用浏览器打开可以查阅覆盖率信息：</p>
+<p ><img src="images/2022-05-02-15-50-30.png" alt="" width="650" class="inline"/></p>
+<p >点击文件名查阅逐行覆盖率信息：</p>
+<p ><img src="images/2022-05-02-14-01-06.png" alt="" width="650" class="inline"/></p>
+<h2><a class="anchor" id="autotoc_md14"></a>
+运行内存检测</h2>
+<p >执行：</p>
+<div class="fragment"><div class="line">cmake --build . --target MemCheck</div>
+</div><!-- fragment --><p >运行成功后，可以在 build/MemCheck 文件夹下找到每个单元测试的内存检测报告，如图所示：</p>
+<p ><img src="images/2022-05-02-17-15-16.png" alt="" width="650" class="inline"/></p>
+<p >文件中“no leaks are possible”说明没有内存泄漏。</p>
+<h1><a class="anchor" id="autotoc_md15"></a>
+实现细节</h1>
+<p >安全检查基于智能指针实现。每个链表结点都有一个 <code>shared_ptr</code> （强引用），指向<code>LifeIndicator</code>对象 。该对象为私有，他人不可能再对它进行强引用。</p>
+<p >所有指向结点的迭代器拥有一个 <code>weak_ptr</code> （弱引用），指向结点的 <code>LifeIndicator</code>。</p>
+<p >当一个结点被销毁，该节点的 <code>LifeIndicator</code> 对象的唯一强引用消失，也被销毁。而迭代器的 <code>weak_ptr</code> 此时可以通过 <code>expired</code> 函数检测到自己指向的对象已经无效，自己是个野指针。在用户试图解引用自己时，就可以报告错误了。 </p>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
