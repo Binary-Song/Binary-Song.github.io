@@ -6,4 +6,4 @@
 
 - [week02](https://binary-song.github.io/kso/week02/index.html) 
 
-- [week02](https://binary-song.github.io/kso/week03/index.html) 
+- [week03](https://binary-song.github.io/kso/week03/index.html) 
