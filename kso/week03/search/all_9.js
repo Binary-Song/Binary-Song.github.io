@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['testcase_0',['TestCase',['../struct_test_case.html',1,'']]],
+  ['trapezium_1',['Trapezium',['../classkso_1_1_trapezium.html',1,'kso::Trapezium'],['../classkso_1_1_trapezium.html#ad4abf17759bec7cb299b41feff6e0036',1,'kso::Trapezium::Trapezium()=default'],['../classkso_1_1_trapezium.html#a6bfda56a1ebe861e07a6b105f72e6f72',1,'kso::Trapezium::Trapezium(double base1, double base2, double side1, double side2)']]],
+  ['triangle_2',['Triangle',['../classkso_1_1_triangle.html',1,'kso::Triangle'],['../classkso_1_1_triangle.html#a1c71d2bcfe9d290ad4f6a36bdd6b4f43',1,'kso::Triangle::Triangle()=default'],['../classkso_1_1_triangle.html#af65fc6796803ef1b6a9df9266ab22d07',1,'kso::Triangle::Triangle(double a, double b, double c)']]],
+  ['type_3',['type',['../classkso_1_1_circle.html#a655f6161ba2c3a5f7d2e034f42a08a20',1,'kso::Circle::type()'],['../classkso_1_1_composite.html#a45d2c05374459fb0f3366d404b8ff632',1,'kso::Composite::type()'],['../classkso_1_1_rectangle.html#a34223f597e23f8aab48aca445b81a69f',1,'kso::Rectangle::type()'],['../classkso_1_1_shape.html#a98358f1af9439ef39ebfca89fb000736',1,'kso::Shape::type()'],['../classkso_1_1_square.html#ae5fba80cf31b8ceae2d5bab62ca9cb84',1,'kso::Square::type()'],['../classkso_1_1_trapezium.html#a2951c0744fe104835b046de50dd460b1',1,'kso::Trapezium::type()'],['../classkso_1_1_triangle.html#ac44ca08d2a0889e033ee74dad05877f3',1,'kso::Triangle::type()']]]
+];
