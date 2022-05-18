@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Week 4 Task: Week 4 作业</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Week 4 Task
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('index.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Week 4 作业 </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p ><a class="anchor" id="md_D__Projects_KSOfficeCpp_yangerhang_week04_README"></a> </p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+1. 项目概述</h1>
+<p >本项目实现矩阵类。支持矩阵相关运算。</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+2. 项目特点</h1>
+<h2><a class="anchor" id="autotoc_md3"></a>
+内存安全</h2>
+<p >迭代器使用智能指针。在解引用前会自动检查是否指向有效内存，无效会报错。不用担心野迭代器会造成“未定义行为”。</p>
+<h2><a class="anchor" id="autotoc_md4"></a>
+懒拷贝</h2>
+<p >矩阵包含指向数据内存块的指针。拷贝时首先浅拷贝，如果后面修改了，则再执行深拷贝； 如果从未修改，则省下一次深拷贝的开销。</p>
+<h2><a class="anchor" id="autotoc_md5"></a>
+高效变换</h2>
+<p >通过创建视图，以下操作能在 O(1) 时间内完成：</p>
+<ul>
+<li>转置（<code>transpose()</code>）</li>
+<li>变形（<code>reshape()</code>）</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md6"></a>
+Cache 友好</h2>
+<p >使用连续内存存放矩阵，对 Cache 友好。</p>
+<h1><a class="anchor" id="autotoc_md7"></a>
+3. API</h1>
+<p >矩阵支持大量操作，例如：</p>
+<p >逐个元素的计算：</p>
+<ul>
+<li>四则：<code>+</code> <code>-</code> <code>*</code> <code>/</code> <code>%</code> <br  />
+</li>
+<li>逻辑：<code>&amp;&amp;</code> <code>||</code> <code>!</code></li>
+<li>位： <code>&amp;</code> <code>|</code> <code>^</code></li>
+<li>比较： <code>&gt;</code> <code>&lt;</code> <code>&gt;=</code> <code>&lt;=</code> <code>==</code> <code>!=</code></li>
+<li>复合赋值： <code>+=</code> <code>-=</code> <code>*=</code> <code>/=</code> <code>%=</code> <code>&amp;=</code> <code>|=</code> <code>^=</code></li>
+</ul>
+<p >线性代数：</p>
+<ul>
+<li>矩阵点乘：<code>dot()</code></li>
+</ul>
+<p >矩阵修改：</p>
+<ul>
+<li>删除行、列：<code>eraseRow()</code> <code>eraseCol()</code></li>
+</ul>
+<p >API文档可以在此查看。 <a href="https://binary-song.github.io/kso/week04/index.html">点此进入</a></p>
+<h1><a class="anchor" id="autotoc_md8"></a>
+4. 构建指南</h1>
+<p >项目基于 CMake 构建，可以在 Linux 、Windows 等平台编译运行。</p>
+<h2><a class="anchor" id="autotoc_md9"></a>
+单元测试</h2>
+<h3><a class="anchor" id="autotoc_md10"></a>
+前提</h3>
+<ul>
+<li>C++工具链（MSVC、MinGW、gcc等均可）</li>
+<li>Boost 库头文件</li>
+</ul>
+<p >单元测试依赖 Boost 的头文件（不需要编译 Boost ），如有必要，请设置 <code>BOOST_ROOT</code> 变量到 Boost 根目录以便 CMake 找到 Boost。</p>
+<h3><a class="anchor" id="autotoc_md11"></a>
+构建和运行</h3>
+<p >在 week04 目录下执行以下命令以完成构建：</p>
+<div class="fragment"><div class="line">mkdir build</div>
+<div class="line">cd build</div>
+<div class="line">cmake ..</div>
+<div class="line">cmake --build .</div>
+</div><!-- fragment --><p >要运行单元测试，执行：</p>
+<div class="fragment"><div class="line">ctest</div>
+</div><!-- fragment --><p >如果使用的是 MSVC，单元测试自带内存泄漏检测功能。如果使用的是 MinGW 或 gcc，请参考下文用 valgrind 执行内存泄漏检测。</p>
+<h2><a class="anchor" id="autotoc_md12"></a>
+API 文档</h2>
+<h3><a class="anchor" id="autotoc_md13"></a>
+前提</h3>
+<ul>
+<li>doxygen</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md14"></a>
+构建和运行</h3>
+<p >打开 week04/build/CMakeCache.txt，将 <code>BUILD_DOC</code> 设置为 <code>ON</code>。</p>
+<p >在 week04/build 目录下执行以下命令：</p>
+<div class="fragment"><div class="line">cmake ..</div>
+<div class="line">cmake --build . --target Doc</div>
+</div><!-- fragment --><p >即可生成并打开API文档。</p>
+<h2><a class="anchor" id="autotoc_md15"></a>
+代码覆盖</h2>
+<h3><a class="anchor" id="autotoc_md16"></a>
+前提</h3>
+<ul>
+<li>C++工具链（MinGW或gcc）</li>
+<li>gcovr</li>
+</ul>
+<p >gcovr 是python包，可以用 <code>pip install gcovr</code> 安装。</p>
+<p >代码覆盖依赖gcov，故不支持MSVC工具链。</p>
+<h3><a class="anchor" id="autotoc_md17"></a>
+构建和运行</h3>
+<p >打开 week04/build/CMakeCache.txt，将 <code>BUILD_COVERAGE</code> 设置为 <code>ON</code>。</p>
+<p >在 week04/build 目录下执行以下命令：</p>
+<div class="fragment"><div class="line">cmake ..</div>
+<div class="line">cmake --build . --target CodeCov</div>
+</div><!-- fragment --><p >即可执行代码覆盖检测。</p>
+<h3><a class="anchor" id="autotoc_md18"></a>
+输出</h3>
+<p >在控制台会有字符形式的输出</p>
+<p >在 build/CodeCov/ 可以找到 html 格式的输出（index.html）</p>
+<h2><a class="anchor" id="autotoc_md19"></a>
+内存检测（Valgrind）</h2>
+<h3><a class="anchor" id="autotoc_md20"></a>
+前提</h3>
+<ul>
+<li>valgrind</li>
+</ul>
+<p >Valgrind 只支持 Linux 平台。如果要在 Windows 平台检测内存泄漏，请参考测试核心模块一节运行单元测试，Boost 在此期间会自动检测内存泄漏。</p>
+<h3><a class="anchor" id="autotoc_md21"></a>
+构建和运行</h3>
+<p >打开 week04/build/CMakeCache.txt，将 <code>BUILD_MEMCHECK</code> 设置为 <code>ON</code>。</p>
+<p >在 week04/build 目录下执行以下命令：</p>
+<div class="fragment"><div class="line">cmake ..</div>
+<div class="line">cmake --build . --target MemCheck</div>
+</div><!-- fragment --><p >即可执行 MemCheck。</p>
+<p >也可以执行<code>ctest</code>来运行测试和 MemCheck。 </p>
+</div></div><!-- PageDoc -->
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+</body>
+</html>

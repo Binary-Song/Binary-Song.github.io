@@ -1,0 +1,809 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Week 4 Task: D:/Projects/KSOfficeCpp/yangerhang/week04/include/matrix.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Week 4 Task
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_d_1_2_projects_2_k_s_office_cpp_2yangerhang_2week04_2include_2matrix_8h-example.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">D:/Projects/KSOfficeCpp/yangerhang/week04/include/matrix.h</div></div>
+</div><!--header-->
+<div class="contents">
+<p >矩阵。本类支持copy-on-write，在不修改的前提下，拷贝的开销很低。</p>
+<p >矩阵。本类支持copy-on-write，在不修改的前提下，拷贝的开销很低。 copy-on-write的机制：Matrix&lt;T&gt; 类，不是“数据”，而是数据的“视图”。 当拷贝本类对象时，并不会立即拷贝数据，而是创建此数据的另一个视图。拷贝视图的开销很低。 当通过视图对数据做修改时（参见“修改”区域），会检测该数据是否被另外的视图共享。 如果有，这才真正拷贝数据并对其做修改。</p>
+<p >视图的实现基于<code>std::shared_ptr</code>。每个矩阵对象和矩阵迭代器 MatrixConstIterator&lt;T&gt; 对象都对其数据形成强引用。当 某块数据不被强引用时，它才会被回收。因此本类和本类的迭代器不存在野指针的问题。</p>
+<p >创建和写入矩阵： </p><div class="fragment"><div class="line"><a id="_a0" name="_a0"></a><a class="code hl_class" href="classkso_1_1_matrix.html">kso::Matrix&lt;int&gt;</a> m(2, 2);</div>
+<div class="line">m.fill(8);</div>
+<div class="line">std::cout &lt;&lt; m;</div>
+<div class="ttc" id="aclasskso_1_1_matrix_html"><div class="ttname"><a href="classkso_1_1_matrix.html">kso::Matrix</a></div><div class="ttdef"><b>Definition:</b> matrix.h:67</div></div>
+</div><!-- fragment --><div class="fragment"><div class="line"><span class="comment">//-------------------------------------------------------</span></div>
+<div class="line"><span class="comment">// matrix.h</span></div>
+<div class="line"><span class="comment">// 创建者：杨尔行</span></div>
+<div class="line"><span class="comment">// 创建时间：2022/5/15</span></div>
+<div class="line"><span class="comment">// 功能描述：矩阵类</span></div>
+<div class="line"><span class="comment">// Copyright 2022 Kingsoft</span></div>
+<div class="line"><span class="comment">//-------------------------------------------------------</span></div>
+<div class="line"><span class="preprocessor">#ifndef WEEK04_MATRIX_H</span></div>
+<div class="line"><span class="preprocessor">#define WEEK04_MATRIX_H</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#ifndef KSO_MATRIX_ERROR</span></div>
+<div class="line"><span class="preprocessor">#define KSO_MATRIX_ERROR(msg)                                                                                          \</span></div>
+<div class="line"><span class="preprocessor">    {                                                                                                                  \</span></div>
+<div class="line"><span class="preprocessor">        std::cerr &lt;&lt; &quot;Fatal Error:&quot;</span> &lt;&lt; msg &lt;&lt; &quot; (&quot; &lt;&lt; __FILE__ &lt;&lt; &quot;:&quot; &lt;&lt; __LINE__ &lt;&lt; &quot;)&quot;;                              \</div>
+<div class="line">        abort();                                                                                                       \</div>
+<div class="line">    }</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#ifndef KSO_MATRIX_ASSERT</span></div>
+<div class="line"><span class="preprocessor">#define KSO_MATRIX_ASSERT(expr, msg)                                                                                   \</span></div>
+<div class="line"><span class="preprocessor">    {                                                                                                                  \</span></div>
+<div class="line"><span class="preprocessor">        if (!(expr))                                                                                                   \</span></div>
+<div class="line"><span class="preprocessor">            KSO_MATRIX_ERROR(msg);                                                                                     \</span></div>
+<div class="line"><span class="preprocessor">    }</span></div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#define KSO_MATRIX_CHECK_INDEX(row, col, rows, cols)                                                                   \</span></div>
+<div class="line"><span class="preprocessor">    KSO_MATRIX_ASSERT(row &gt;= 0 &amp;&amp; row &lt; rows &amp;&amp; col &gt;= 0 &amp;&amp; col &lt; cols, &quot;Index out of range.&quot;</span>)</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#define KSO_MATRIX_CHECK_SHAPE(a, b)                                                                                   \</span></div>
+<div class="line"><span class="preprocessor">    KSO_MATRIX_ASSERT((a).m_rows == (b).m_rows &amp;&amp; (a).m_cols == (b).m_cols, &quot;Compatible shapes required.&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacekso.html">kso</a></div>
+<div class="line">{</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span>&gt;</div>
+<div class="line"><span class="keyword">class </span>MatrixConstIterator;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><span class="keyword">class </span>Matrix</div>
+<div class="line">{</div>
+<div class="line"><span class="preprocessor">#pragma region 成员类型</span></div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">    <span class="keyword">using</span> Storage    = std::vector&lt;T&gt;;</div>
+<div class="line">    <span class="keyword">using</span> StoragePtr = std::shared_ptr&lt;Storage&gt;;</div>
+<div class="line"><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#pragma region 构造</span></div>
+<div class="line">    <span class="comment">//-------------------------------------------------------</span></div>
+<div class="line">    <span class="comment">// 通过构造函数或静态成员函数创建矩阵</span></div>
+<div class="line">    <span class="comment">// 下面定义的公有的构造函数永远会新分配内存给数据。</span></div>
+<div class="line">    <span class="comment">// 拷贝构造由编译器生成，是浅拷贝。</span></div>
+<div class="line">    <span class="comment">//-------------------------------------------------------</span></div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    <a id="a0" name="a0"></a><a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a>()</div>
+<div class="line">    {</div>
+<div class="line">        <a id="a1" name="a1"></a><a class="code hl_variable" href="classkso_1_1_matrix.html#af0817206c9612a97d32727ca182abbda">m_data</a>      = std::make_shared&lt;Storage&gt;();</div>
+<div class="line">        <a id="a2" name="a2"></a><a class="code hl_variable" href="classkso_1_1_matrix.html#ab73668b67906661942b8101b186ae9f9">m_rows</a>      = 0;</div>
+<div class="line">        <a id="a3" name="a3"></a><a class="code hl_variable" href="classkso_1_1_matrix.html#a3d53900ec31bbe761666d562c5516d43">m_cols</a>      = 0;</div>
+<div class="line">        <a id="a4" name="a4"></a><a class="code hl_variable" href="classkso_1_1_matrix.html#a1c7a0814c3d2673eef61a703b6758d0e">m_rowStride</a> = 1;</div>
+<div class="line">        <a id="a5" name="a5"></a><a class="code hl_variable" href="classkso_1_1_matrix.html#a136442bf2dea538ab8e559a94ec80dd1">m_colStride</a> = 1;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a>(<span class="keywordtype">int</span> rows, <span class="keywordtype">int</span> cols)</div>
+<div class="line">    {</div>
+<div class="line">        <a class="code hl_variable" href="classkso_1_1_matrix.html#af0817206c9612a97d32727ca182abbda">m_data</a>      = std::make_shared&lt;Storage&gt;(rows * cols);</div>
+<div class="line">        <a class="code hl_variable" href="classkso_1_1_matrix.html#ab73668b67906661942b8101b186ae9f9">m_rows</a>      = rows;</div>
+<div class="line">        <a class="code hl_variable" href="classkso_1_1_matrix.html#a3d53900ec31bbe761666d562c5516d43">m_cols</a>      = cols;</div>
+<div class="line">        <a class="code hl_variable" href="classkso_1_1_matrix.html#a1c7a0814c3d2673eef61a703b6758d0e">m_rowStride</a> = 1;</div>
+<div class="line">        <a class="code hl_variable" href="classkso_1_1_matrix.html#a136442bf2dea538ab8e559a94ec80dd1">m_colStride</a> = rows;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">    <a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a>(StoragePtr data, <span class="keywordtype">int</span> rows, <span class="keywordtype">int</span> cols, <span class="keywordtype">int</span> rowStride, <span class="keywordtype">int</span> colStride)</div>
+<div class="line">        : <a class="code hl_variable" href="classkso_1_1_matrix.html#af0817206c9612a97d32727ca182abbda">m_data</a>(data)</div>
+<div class="line">        , <a class="code hl_variable" href="classkso_1_1_matrix.html#ab73668b67906661942b8101b186ae9f9">m_rows</a>(rows)</div>
+<div class="line">        , <a class="code hl_variable" href="classkso_1_1_matrix.html#a3d53900ec31bbe761666d562c5516d43">m_cols</a>(cols)</div>
+<div class="line">        , <a class="code hl_variable" href="classkso_1_1_matrix.html#a1c7a0814c3d2673eef61a703b6758d0e">m_rowStride</a>(rowStride)</div>
+<div class="line">        , <a class="code hl_variable" href="classkso_1_1_matrix.html#a136442bf2dea538ab8e559a94ec80dd1">m_colStride</a>(colStride)</div>
+<div class="line">    {</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">static</span> <a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a> constant(T value, <span class="keywordtype">int</span> rows, <span class="keywordtype">int</span> cols)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">return</span> <a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a>(std::make_shared&lt;Storage&gt;(std::initializer_list&lt;T&gt;{value}), rows, cols, 0, 0);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">static</span> <a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a> constantLike(T value, <a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a> <span class="keyword">const</span> &amp;like)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">return</span> constant(value, like.m_rows, like.m_cols);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#pragma region 访问</span></div>
+<div class="line">    <span class="comment">//-------------------------------------------------------</span></div>
+<div class="line">    <span class="comment">// 访问矩阵的元素或属性，只读</span></div>
+<div class="line">    <span class="comment">//-------------------------------------------------------</span></div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    T <a id="a6" name="a6"></a><a class="code hl_function" href="classkso_1_1_matrix.html#a3061ada0e21b4935ee1bfe46cab7ae79">get</a>(<span class="keywordtype">int</span> row, <span class="keywordtype">int</span> col)<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        KSO_MATRIX_CHECK_INDEX(row, col, <a class="code hl_variable" href="classkso_1_1_matrix.html#ab73668b67906661942b8101b186ae9f9">m_rows</a>, <a class="code hl_variable" href="classkso_1_1_matrix.html#a3d53900ec31bbe761666d562c5516d43">m_cols</a>);</div>
+<div class="line">        <span class="keywordflow">return</span> this-&gt;<a id="a7" name="a7"></a><a class="code hl_function" href="classkso_1_1_matrix.html#af8d995dec90a4c1ba0e298732267c32b">getRef</a>(row, col);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">int</span> <a id="a8" name="a8"></a><a class="code hl_function" href="classkso_1_1_matrix.html#a161846b28c4dbdd01ecd094a3a7096c0">size</a>()<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        <span class="keywordflow">return</span> (<a class="code hl_variable" href="classkso_1_1_matrix.html#ab73668b67906661942b8101b186ae9f9">m_rows</a> * <a class="code hl_variable" href="classkso_1_1_matrix.html#a3d53900ec31bbe761666d562c5516d43">m_cols</a>);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">protected</span>:</div>
+<div class="line">    T &amp;<a class="code hl_function" href="classkso_1_1_matrix.html#af8d995dec90a4c1ba0e298732267c32b">getRef</a>(<span class="keywordtype">int</span> row, <span class="keywordtype">int</span> col)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">return</span> <a class="code hl_variable" href="classkso_1_1_matrix.html#af0817206c9612a97d32727ca182abbda">m_data</a>-&gt;at(row * <a class="code hl_variable" href="classkso_1_1_matrix.html#a1c7a0814c3d2673eef61a703b6758d0e">m_rowStride</a> + col * <a class="code hl_variable" href="classkso_1_1_matrix.html#a136442bf2dea538ab8e559a94ec80dd1">m_colStride</a>);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    T <span class="keyword">const</span> &amp;<a class="code hl_function" href="classkso_1_1_matrix.html#af8d995dec90a4c1ba0e298732267c32b">getRef</a>(<span class="keywordtype">int</span> row, <span class="keywordtype">int</span> col)<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        <span class="keywordflow">return</span> <a class="code hl_variable" href="classkso_1_1_matrix.html#af0817206c9612a97d32727ca182abbda">m_data</a>-&gt;at(row * <a class="code hl_variable" href="classkso_1_1_matrix.html#a1c7a0814c3d2673eef61a703b6758d0e">m_rowStride</a> + col * <a class="code hl_variable" href="classkso_1_1_matrix.html#a136442bf2dea538ab8e559a94ec80dd1">m_colStride</a>);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#pragma region 视图</span></div>
+<div class="line">    <span class="comment">//-------------------------------------------------------</span></div>
+<div class="line">    <span class="comment">// 创建对本对象数据的新视图（不分配内存）</span></div>
+<div class="line">    <span class="comment">// 创建视图的函数不会修改底层数据，而是返回数据的新视图。所以都是</span></div>
+<div class="line">    <span class="comment">// const 函数。</span></div>
+<div class="line">    <span class="comment">//-------------------------------------------------------</span></div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    <a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a> <a id="a9" name="a9"></a><a class="code hl_function" href="classkso_1_1_matrix.html#aecf23ad30fa7118d4402d1a47a638aa6">transpose</a>()<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        <span class="keywordflow">return</span> <a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a>(<a class="code hl_variable" href="classkso_1_1_matrix.html#af0817206c9612a97d32727ca182abbda">m_data</a>, <a class="code hl_variable" href="classkso_1_1_matrix.html#a3d53900ec31bbe761666d562c5516d43">m_cols</a>, <a class="code hl_variable" href="classkso_1_1_matrix.html#ab73668b67906661942b8101b186ae9f9">m_rows</a>, <a class="code hl_variable" href="classkso_1_1_matrix.html#a136442bf2dea538ab8e559a94ec80dd1">m_colStride</a>, <a class="code hl_variable" href="classkso_1_1_matrix.html#a1c7a0814c3d2673eef61a703b6758d0e">m_rowStride</a>);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a> <a id="a10" name="a10"></a><a class="code hl_function" href="classkso_1_1_matrix.html#a726008be06b75bf05ca4c1701806b34a">reshape</a>(<span class="keywordtype">int</span> rows, <span class="keywordtype">int</span> cols)<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        <span class="keywordflow">if</span> (rows == -1)</div>
+<div class="line">        {</div>
+<div class="line">            KSO_MATRIX_ASSERT(<a class="code hl_function" href="classkso_1_1_matrix.html#a161846b28c4dbdd01ecd094a3a7096c0">size</a>() % cols == 0, <span class="stringliteral">&quot;Cannot infer row count.&quot;</span>);</div>
+<div class="line">            rows = <a class="code hl_function" href="classkso_1_1_matrix.html#a161846b28c4dbdd01ecd094a3a7096c0">size</a>() / cols;</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cols == -1)</div>
+<div class="line">        {</div>
+<div class="line">            KSO_MATRIX_ASSERT(<a class="code hl_function" href="classkso_1_1_matrix.html#a161846b28c4dbdd01ecd094a3a7096c0">size</a>() % rows == 0, <span class="stringliteral">&quot;Cannot infer column count.&quot;</span>);</div>
+<div class="line">            cols = <a class="code hl_function" href="classkso_1_1_matrix.html#a161846b28c4dbdd01ecd094a3a7096c0">size</a>() / rows;</div>
+<div class="line">        }</div>
+<div class="line">        KSO_MATRIX_ASSERT(rows * cols == <a class="code hl_variable" href="classkso_1_1_matrix.html#ab73668b67906661942b8101b186ae9f9">m_rows</a> * <a class="code hl_variable" href="classkso_1_1_matrix.html#a3d53900ec31bbe761666d562c5516d43">m_cols</a>, <span class="stringliteral">&quot;Cannot change element count using reshape.&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classkso_1_1_matrix.html#a136442bf2dea538ab8e559a94ec80dd1">m_colStride</a> == 1)</div>
+<div class="line">            <span class="keywordflow">return</span> Matrix&lt;T&gt;(<a class="code hl_variable" href="classkso_1_1_matrix.html#af0817206c9612a97d32727ca182abbda">m_data</a>, rows, cols, cols, 1);</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classkso_1_1_matrix.html#a1c7a0814c3d2673eef61a703b6758d0e">m_rowStride</a> == 1)</div>
+<div class="line">            <span class="keywordflow">return</span> Matrix&lt;T&gt;(<a class="code hl_variable" href="classkso_1_1_matrix.html#af0817206c9612a97d32727ca182abbda">m_data</a>, rows, cols, 1, rows);</div>
+<div class="line">        KSO_MATRIX_ERROR(<span class="stringliteral">&quot;Either m_colStride or m_rowStride should be 1.&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#pragma region 运算</span></div>
+<div class="line">    <span class="comment">//-------------------------------------------------------</span></div>
+<div class="line">    <span class="comment">// 进行运算，并分配内存来存储运算结果</span></div>
+<div class="line">    <span class="comment">// 因为结果是新的内存，所以不需要修改本对象。故为 const 函数</span></div>
+<div class="line">    <span class="comment">//-------------------------------------------------------</span></div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    <span class="keyword">friend</span> <a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a> <a id="a11" name="a11"></a><a class="code hl_friend" href="classkso_1_1_matrix.html#ad76fb243ff22434be4fd9f3bf9855d21">matmul</a>(<a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a> <span class="keyword">const</span> &amp;a, <a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a> <span class="keyword">const</span> &amp;b)</div>
+<div class="line">    {</div>
+<div class="line">        KSO_MATRIX_ASSERT(a.m_cols == b.m_rows, <span class="stringliteral">&quot;lhs columns should be equal to rhs rows&quot;</span>);</div>
+<div class="line">        <a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a> c(a.m_rows, b.m_cols);</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; c.m_rows; i++)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; c.m_cols; j++)</div>
+<div class="line">            {</div>
+<div class="line">                <span class="keywordtype">int</span> value = 0;</div>
+<div class="line">                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; a.m_cols; k++)</div>
+<div class="line">                {</div>
+<div class="line">                    value += a.get(i, k) * b.get(k, j);</div>
+<div class="line">                }</div>
+<div class="line">                c.set(i, j, value);</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">return</span> c;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a> <a id="a12" name="a12"></a><a class="code hl_function" href="classkso_1_1_matrix.html#ae6d0c4f648af8c51d774083805de4d91">dot</a>(<a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a> <span class="keyword">const</span> &amp;a)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">return</span> <a class="code hl_friend" href="classkso_1_1_matrix.html#ad76fb243ff22434be4fd9f3bf9855d21">matmul</a>(*<span class="keyword">this</span>, a);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">friend</span> <a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a> <a id="a13" name="a13"></a><a class="code hl_friend" href="classkso_1_1_matrix.html#a8cc4ec5a3f960a9cac920265379fb4bf">doBinaryOperation</a>(<a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a> <span class="keyword">const</span> &amp;a, <a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a> <span class="keyword">const</span> &amp;b, T (*op)(T a, T b))</div>
+<div class="line">    {</div>
+<div class="line">        <a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a> lhs, rhs;</div>
+<div class="line">        <span class="comment">// 广播机制：将1x1矩阵转换成合适的size</span></div>
+<div class="line">        <span class="keywordflow">if</span> (a.is1x1())</div>
+<div class="line">        {</div>
+<div class="line">            lhs = constant(a.get(0, 0), b.m_rows, b.m_cols);</div>
+<div class="line">            rhs = b;</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (b.is1x1())</div>
+<div class="line">        {</div>
+<div class="line">            lhs = a;</div>
+<div class="line">            rhs = constant(b.get(0, 0), a.m_rows, a.m_cols);</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">else</span></div>
+<div class="line">        {</div>
+<div class="line">            KSO_MATRIX_CHECK_SHAPE(a, b);</div>
+<div class="line">        }</div>
+<div class="line">        <a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a> c(lhs.m_rows, rhs.m_cols);</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; lhs.m_rows; i++)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; lhs.m_cols; j++)</div>
+<div class="line">            {</div>
+<div class="line">                c.getRef(i, j) = op(lhs.get(i, j), rhs.get(i, j));</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">return</span> c;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">friend</span> <a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a> <a id="a14" name="a14"></a><a class="code hl_friend" href="classkso_1_1_matrix.html#abd0d1c2329f003028b8bbdc4d9f16fdb">doUnaryOperation</a>(<a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a> <span class="keyword">const</span> &amp;lhs, T (*op)(T))</div>
+<div class="line">    {</div>
+<div class="line">        <a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a> c(lhs.m_rows, lhs.m_cols);</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; lhs.m_rows; i++)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; lhs.m_cols; j++)</div>
+<div class="line">            {</div>
+<div class="line">                c.getRef(i, j) = op(lhs.get(i, j));</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">return</span> c;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">friend</span> <a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a> <a class="code hl_friend" href="classkso_1_1_matrix.html#a8cc4ec5a3f960a9cac920265379fb4bf">doBinaryOperation</a>(T <span class="keyword">const</span> &amp;a, <a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a> <span class="keyword">const</span> &amp;b, T (*op)(T a, T b))</div>
+<div class="line">    {</div>
+<div class="line">        <a class="code hl_friend" href="classkso_1_1_matrix.html#a8cc4ec5a3f960a9cac920265379fb4bf">doBinaryOperation</a>(constantLike(a, b), b);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">friend</span> <a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a> <a class="code hl_friend" href="classkso_1_1_matrix.html#a8cc4ec5a3f960a9cac920265379fb4bf">doBinaryOperation</a>(<a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a> <span class="keyword">const</span> &amp;a, T <span class="keyword">const</span> &amp;b, T (*op)(T a, T b))</div>
+<div class="line">    {</div>
+<div class="line">        <a class="code hl_friend" href="classkso_1_1_matrix.html#a8cc4ec5a3f960a9cac920265379fb4bf">doBinaryOperation</a>(a, constantLike(b, a));</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#pragma region 修改</span></div>
+<div class="line">    <span class="comment">//-------------------------------------------------------</span></div>
+<div class="line">    <span class="comment">// 修改当前矩阵的数据，改变一个或多个元素的值。</span></div>
+<div class="line">    <span class="comment">// 涉及到元素的修改。考虑到当前数据可能被其他视图共享，必须进行检</span></div>
+<div class="line">    <span class="comment">// 测：如果数据被其他视图共享，则拷贝一份，并将本对象的数据指针</span></div>
+<div class="line">    <span class="comment">// 指向该拷贝（该过程由 copyIfNecessary 完成）</span></div>
+<div class="line">    <span class="comment">// NOTE: 所有本区函数，必须直接或间接调用1次 copyIfNecessary ！</span></div>
+<div class="line">    <span class="comment">//-------------------------------------------------------</span></div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    <a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a> <a id="a15" name="a15"></a><a class="code hl_function" href="classkso_1_1_matrix.html#ae3cd5aa7f59c7725b7d20dc3bae72213">fill</a>(T num)</div>
+<div class="line">    {</div>
+<div class="line">        this-&gt;copyIfNecessary();</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;&amp;item : *<a class="code hl_variable" href="classkso_1_1_matrix.html#af0817206c9612a97d32727ca182abbda">m_data</a>)</div>
+<div class="line">        {</div>
+<div class="line">            item = num;</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> <a id="a16" name="a16"></a><a class="code hl_function" href="classkso_1_1_matrix.html#a399af6cbe4b628277d704111ef4a21f7">set</a>(<span class="keywordtype">int</span> row, <span class="keywordtype">int</span> col, T value)</div>
+<div class="line">    {</div>
+<div class="line">        KSO_MATRIX_CHECK_INDEX(row, col, <a class="code hl_variable" href="classkso_1_1_matrix.html#ab73668b67906661942b8101b186ae9f9">m_rows</a>, <a class="code hl_variable" href="classkso_1_1_matrix.html#a3d53900ec31bbe761666d562c5516d43">m_cols</a>);</div>
+<div class="line">        this-&gt;copyIfNecessary();</div>
+<div class="line">        <span class="keyword">const_cast&lt;</span>T &amp;<span class="keyword">&gt;</span>(this-&gt;<a class="code hl_function" href="classkso_1_1_matrix.html#af8d995dec90a4c1ba0e298732267c32b">getRef</a>(row, col)) = std::move(value);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a> &amp;<a id="a17" name="a17"></a><a class="code hl_function" href="classkso_1_1_matrix.html#acd84b104d38f04569dbb357d0ce4eb15">doBinaryOperationInplace</a>(<a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a> <span class="keyword">const</span> &amp;m, T (*op)(T a, T b))</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// in place 操作暂不支持广播机制</span></div>
+<div class="line">        KSO_MATRIX_CHECK_SHAPE(*<span class="keyword">this</span>, m);</div>
+<div class="line">        this-&gt;copyIfNecessary();</div>
+<div class="line">        <span class="keywordtype">int</span> rows = std::max(<a class="code hl_variable" href="classkso_1_1_matrix.html#ab73668b67906661942b8101b186ae9f9">m_rows</a>, m.m_rows);</div>
+<div class="line">        <span class="keywordtype">int</span> cols = std::max(<a class="code hl_variable" href="classkso_1_1_matrix.html#a3d53900ec31bbe761666d562c5516d43">m_cols</a>, m.m_cols);</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; rows; i++)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; cols; j++)</div>
+<div class="line">            {</div>
+<div class="line">                <span class="keyword">auto</span> x             = this-&gt;<a class="code hl_function" href="classkso_1_1_matrix.html#a3061ada0e21b4935ee1bfe46cab7ae79">get</a>(i, j);</div>
+<div class="line">                <span class="keyword">auto</span> y             = m.get(i, j);</div>
+<div class="line">                <span class="keyword">auto</span> r             = op(x, y);</div>
+<div class="line">                this-&gt;<a class="code hl_function" href="classkso_1_1_matrix.html#af8d995dec90a4c1ba0e298732267c32b">getRef</a>(i, j) = r;</div>
+<div class="line">            };</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a> &amp;<a class="code hl_function" href="classkso_1_1_matrix.html#acd84b104d38f04569dbb357d0ce4eb15">doBinaryOperationInplace</a>(T <span class="keyword">const</span> &amp;v, T (*op)(T a, T b))</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">return</span> <a class="code hl_function" href="classkso_1_1_matrix.html#acd84b104d38f04569dbb357d0ce4eb15">doBinaryOperationInplace</a>(constantLike(v, *<span class="keyword">this</span>), op);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#pragma region 流</span></div>
+<div class="line">    <span class="comment">//-------------------------------------------------------</span></div>
+<div class="line">    <span class="comment">// 和标准库流的交互</span></div>
+<div class="line">    <span class="comment">//-------------------------------------------------------</span></div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    <span class="keyword">friend</span> std::ostream &amp;<a id="a18" name="a18"></a><a class="code hl_friend" href="classkso_1_1_matrix.html#a611ec350479a9f8388d21caa29dbde94">operator&lt;&lt;</a>(std::ostream &amp;stream, <a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a> <span class="keyword">const</span> &amp;m)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m.m_rows; i++)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; m.m_cols; j++)</div>
+<div class="line">            {</div>
+<div class="line">                stream &lt;&lt; <span class="charliteral">&#39;\t&#39;</span> &lt;&lt; m.get(i, j);</div>
+<div class="line">            }</div>
+<div class="line">            stream &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">return</span> stream;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#pragma region 迭代器</span></div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    MatrixConstIterator&lt;T&gt; <a id="a19" name="a19"></a><a class="code hl_function" href="classkso_1_1_matrix.html#a0852c995891943eab307b60963d44608">begin</a>()<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        <span class="keywordflow">return</span> MatrixConstIterator&lt;T&gt;(*<span class="keyword">this</span>, 0);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    MatrixConstIterator&lt;T&gt; <a id="a20" name="a20"></a><a class="code hl_function" href="classkso_1_1_matrix.html#a286ec6fc82230535737720ddf11be9dc">end</a>()<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        <span class="keywordflow">return</span> MatrixConstIterator&lt;T&gt;(*<span class="keyword">this</span>, <a class="code hl_variable" href="classkso_1_1_matrix.html#ab73668b67906661942b8101b186ae9f9">m_rows</a> * <a class="code hl_variable" href="classkso_1_1_matrix.html#a3d53900ec31bbe761666d562c5516d43">m_cols</a>);</div>
+<div class="line">    }</div>
+<div class="line"><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#pragma region 成员变量</span></div>
+<div class="line"><span class="keyword">protected</span>:</div>
+<div class="line">    StoragePtr <a class="code hl_variable" href="classkso_1_1_matrix.html#af0817206c9612a97d32727ca182abbda">m_data</a>;</div>
+<div class="line">    <span class="keywordtype">int</span> <a class="code hl_variable" href="classkso_1_1_matrix.html#ab73668b67906661942b8101b186ae9f9">m_rows</a> = 0;</div>
+<div class="line">    <span class="keywordtype">int</span> <a class="code hl_variable" href="classkso_1_1_matrix.html#a3d53900ec31bbe761666d562c5516d43">m_cols</a> = 0;</div>
+<div class="line">    <span class="keywordtype">int</span> <a class="code hl_variable" href="classkso_1_1_matrix.html#a1c7a0814c3d2673eef61a703b6758d0e">m_rowStride</a> = 0;</div>
+<div class="line">    <span class="keywordtype">int</span> <a class="code hl_variable" href="classkso_1_1_matrix.html#a136442bf2dea538ab8e559a94ec80dd1">m_colStride</a> = 0;</div>
+<div class="line"><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#pragma region 杂项</span></div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">    <span class="keywordtype">void</span> copyIfNecessary()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classkso_1_1_matrix.html#af0817206c9612a97d32727ca182abbda">m_data</a>.use_count() &gt; 1)</div>
+<div class="line">        {</div>
+<div class="line">            <a class="code hl_variable" href="classkso_1_1_matrix.html#af0817206c9612a97d32727ca182abbda">m_data</a> = std::make_shared&lt;Storage&gt;(*<a class="code hl_variable" href="classkso_1_1_matrix.html#af0817206c9612a97d32727ca182abbda">m_data</a>);</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">bool</span> is1x1()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">return</span> (<a class="code hl_variable" href="classkso_1_1_matrix.html#ab73668b67906661942b8101b186ae9f9">m_rows</a> == 1 &amp;&amp; <a class="code hl_variable" href="classkso_1_1_matrix.html#a3d53900ec31bbe761666d562c5516d43">m_cols</a> == 1);</div>
+<div class="line">    }</div>
+<div class="line"><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#pragma region 重复性代码</span></div>
+<div class="line">    <span class="comment">//-------------------------------------------------------</span></div>
+<div class="line">    <span class="comment">// 重复性代码使用宏来强制确保一致性，方便维护</span></div>
+<div class="line">    <span class="comment">// 编写某区域代码时需要遵守上面对应区域的要求</span></div>
+<div class="line">    <span class="comment">//-------------------------------------------------------</span></div>
+<div class="line"><span class="preprocessor">#pragma region 运算</span></div>
+<div class="line"><span class="preprocessor">#pragma region 单目运算</span></div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line"><span class="preprocessor">#define KSO_MATRIX_UNARY_OP_DEF(op)                                                                                    \</span></div>
+<div class="line"><span class="preprocessor">    friend Matrix operator op(Matrix const &amp;a)                                                                         \</span></div>
+<div class="line"><span class="preprocessor">    {                                                                                                                  \</span></div>
+<div class="line"><span class="preprocessor">        return doUnaryOperation(a, [](Matrix const &amp;a) {                                                               \</span></div>
+<div class="line"><span class="preprocessor">            return op a;                                                                                               \</span></div>
+<div class="line"><span class="preprocessor">        });                                                                                                            \</span></div>
+<div class="line"><span class="preprocessor">    }</span></div>
+<div class="line">    KSO_MATRIX_UNARY_OP_DEF(-)</div>
+<div class="line">    KSO_MATRIX_UNARY_OP_DEF(!)</div>
+<div class="line">    KSO_MATRIX_UNARY_OP_DEF(~)</div>
+<div class="line"><span class="preprocessor">#undef KSO_MATRIX_UNARY_OP_DEF</span></div>
+<div class="line"><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"><span class="preprocessor">#pragma region 双目运算 矩阵 - 矩阵</span></div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line"><span class="preprocessor">#define KSO_MATRIX_BINARY_OP_MM_DEF(op)                                                                                \</span></div>
+<div class="line"><span class="preprocessor">    friend Matrix operator op(Matrix const &amp;a, Matrix const &amp;b)                                                        \</span></div>
+<div class="line"><span class="preprocessor">    {                                                                                                                  \</span></div>
+<div class="line"><span class="preprocessor">        return doBinaryOperation(a, b, [](Matrix const &amp;a, Matrix const &amp;b) {                                          \</span></div>
+<div class="line"><span class="preprocessor">            return a op b;                                                                                             \</span></div>
+<div class="line"><span class="preprocessor">        });                                                                                                            \</span></div>
+<div class="line"><span class="preprocessor">    }</span></div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MM_DEF(+)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MM_DEF(-)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MM_DEF(*)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MM_DEF(/)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MM_DEF(%)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MM_DEF(&amp;)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MM_DEF(|)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MM_DEF(^)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MM_DEF(&amp;&amp;)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MM_DEF(||)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MM_DEF(&gt;)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MM_DEF(&lt;)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MM_DEF(==)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MM_DEF(&gt;=)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MM_DEF(&lt;=)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MM_DEF(!=)</div>
+<div class="line"><span class="preprocessor">#undef KSO_MATRIX_BINARY_OP_MM_DEF</span></div>
+<div class="line"><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"><span class="preprocessor">#pragma region 双目运算 标量 - 矩阵</span></div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line"><span class="preprocessor">#define KSO_MATRIX_BINARY_OP_SM_DEF(op)                                                                                \</span></div>
+<div class="line"><span class="preprocessor">    friend Matrix operator op(T const &amp;a, Matrix const &amp;b)                                                             \</span></div>
+<div class="line"><span class="preprocessor">    {                                                                                                                  \</span></div>
+<div class="line"><span class="preprocessor">        return doBinaryOperation(a, b, [](Matrix const &amp;a, Matrix const &amp;b) {                                          \</span></div>
+<div class="line"><span class="preprocessor">            return a op b;                                                                                             \</span></div>
+<div class="line"><span class="preprocessor">        });                                                                                                            \</span></div>
+<div class="line"><span class="preprocessor">    }</span></div>
+<div class="line">    KSO_MATRIX_BINARY_OP_SM_DEF(+)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_SM_DEF(-)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_SM_DEF(*)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_SM_DEF(/)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_SM_DEF(%)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_SM_DEF(&amp;)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_SM_DEF(|)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_SM_DEF(^)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_SM_DEF(&amp;&amp;)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_SM_DEF(||)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_SM_DEF(&gt;)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_SM_DEF(&lt;)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_SM_DEF(==)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_SM_DEF(&gt;=)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_SM_DEF(&lt;=)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_SM_DEF(!=)</div>
+<div class="line"><span class="preprocessor">#undef KSO_MATRIX_BINARY_OP_SM_DEF</span></div>
+<div class="line"><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"><span class="preprocessor">#pragma region 双目运算 矩阵 - 标量</span></div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line"><span class="preprocessor">#define KSO_MATRIX_BINARY_OP_MS_DEF(op)                                                                                \</span></div>
+<div class="line"><span class="preprocessor">    friend Matrix operator op(Matrix const &amp;a, T const &amp;b)                                                               \</span></div>
+<div class="line"><span class="preprocessor">    {                                                                                                                  \</span></div>
+<div class="line"><span class="preprocessor">        return doBinaryOperation(a, b, [](Matrix const &amp;a, Matrix const &amp;b) {                                          \</span></div>
+<div class="line"><span class="preprocessor">            return a op b;                                                                                              \</span></div>
+<div class="line"><span class="preprocessor">        });                                                                                                            \</span></div>
+<div class="line"><span class="preprocessor">    }</span></div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MS_DEF(+)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MS_DEF(-)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MS_DEF(*)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MS_DEF(/)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MS_DEF(%)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MS_DEF(&amp;)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MS_DEF(|)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MS_DEF(^)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MS_DEF(&amp;&amp;)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MS_DEF(||)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MS_DEF(&gt;)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MS_DEF(&lt;)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MS_DEF(==)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MS_DEF(&gt;=)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MS_DEF(&lt;=)</div>
+<div class="line">    KSO_MATRIX_BINARY_OP_MS_DEF(!=)</div>
+<div class="line"><span class="preprocessor">#undef KSO_MATRIX_BINARY_OP_MS_DEF</span></div>
+<div class="line"><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"><span class="preprocessor">#pragma region 修改</span></div>
+<div class="line"><span class="preprocessor">#pragma region 复合赋值 矩阵</span></div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line"><span class="preprocessor">#define KSO_MATRIX_COMPOUND_ASSIGN_M_DEF(cop, op)                                                                      \</span></div>
+<div class="line"><span class="preprocessor">    Matrix &amp;operator cop(Matrix const &amp;other)                                                                          \</span></div>
+<div class="line"><span class="preprocessor">    {                                                                                                                  \</span></div>
+<div class="line"><span class="preprocessor">        return doBinaryOperationInplace(other, [](T a, T b) {                                                          \</span></div>
+<div class="line"><span class="preprocessor">            return a op b;                                                                                             \</span></div>
+<div class="line"><span class="preprocessor">        });                                                                                                            \</span></div>
+<div class="line"><span class="preprocessor">    }</span></div>
+<div class="line">    KSO_MATRIX_COMPOUND_ASSIGN_M_DEF(+=, +)</div>
+<div class="line">    KSO_MATRIX_COMPOUND_ASSIGN_M_DEF(-=, -)</div>
+<div class="line">    KSO_MATRIX_COMPOUND_ASSIGN_M_DEF(*=, *)</div>
+<div class="line">    KSO_MATRIX_COMPOUND_ASSIGN_M_DEF(/=, /)</div>
+<div class="line">    KSO_MATRIX_COMPOUND_ASSIGN_M_DEF(%=, %)</div>
+<div class="line">    KSO_MATRIX_COMPOUND_ASSIGN_M_DEF(&amp;=, &amp;)</div>
+<div class="line">    KSO_MATRIX_COMPOUND_ASSIGN_M_DEF(|=, |)</div>
+<div class="line">    KSO_MATRIX_COMPOUND_ASSIGN_M_DEF(^=, ^)</div>
+<div class="line"><span class="preprocessor">#undef KSO_MATRIX_COMPOUND_ASSIGN_M_DEF</span></div>
+<div class="line"><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"><span class="preprocessor">#pragma region 复合赋值 标量</span></div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line"><span class="preprocessor">#define KSO_MATRIX_COMPOUND_ASSIGN_S_DEF(cop, op)                                                                      \</span></div>
+<div class="line"><span class="preprocessor">    Matrix &amp;operator cop(T const &amp;other)                                                                               \</span></div>
+<div class="line"><span class="preprocessor">    {                                                                                                                  \</span></div>
+<div class="line"><span class="preprocessor">        return doBinaryOperationInplace(other, [](T a, T b) {                                                          \</span></div>
+<div class="line"><span class="preprocessor">            return a op b;                                                                                             \</span></div>
+<div class="line"><span class="preprocessor">        });                                                                                                            \</span></div>
+<div class="line"><span class="preprocessor">    }</span></div>
+<div class="line">    KSO_MATRIX_COMPOUND_ASSIGN_S_DEF(+=, +)</div>
+<div class="line">    KSO_MATRIX_COMPOUND_ASSIGN_S_DEF(-=, -)</div>
+<div class="line">    KSO_MATRIX_COMPOUND_ASSIGN_S_DEF(*=, *)</div>
+<div class="line">    KSO_MATRIX_COMPOUND_ASSIGN_S_DEF(/=, /)</div>
+<div class="line">    KSO_MATRIX_COMPOUND_ASSIGN_S_DEF(%=, %)</div>
+<div class="line">    KSO_MATRIX_COMPOUND_ASSIGN_S_DEF(&amp;=, &amp;)</div>
+<div class="line">    KSO_MATRIX_COMPOUND_ASSIGN_S_DEF(|=, |)</div>
+<div class="line">    KSO_MATRIX_COMPOUND_ASSIGN_S_DEF(^=, ^)</div>
+<div class="line"><span class="preprocessor">#undef KSO_MATRIX_COMPOUND_ASSIGN_S_DEF</span></div>
+<div class="line"><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"><span class="preprocessor">#pragma endregion</span></div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><span class="keyword">class </span>MatrixConstIterator: <span class="keyword">public</span> Matrix&lt;T&gt;</div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">    <span class="keywordtype">int</span> m_flatIndex = 0;</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_function" href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">Matrix</a>&lt;T&gt;;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">using</span> <a id="a21" name="a21"></a><a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#ae04e616e25795abdf3eb1049a4fd2614">iterator_category</a> = std::random_access_iterator_tag;</div>
+<div class="line">    <span class="keyword">using</span> <a id="a22" name="a22"></a><a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#aeb5048761bf9266085484ec46f21402c">value_type</a>        = T;</div>
+<div class="line">    <span class="keyword">using</span> <a id="a23" name="a23"></a><a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#a2572f231bf4d68003762f409492325f7">difference_type</a>   = unsigned;</div>
+<div class="line">    <span class="keyword">using</span> <a id="a24" name="a24"></a><a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#aa747a2ddfb2f70ebf416b7a9cd7e2117">pointer</a>           = T <span class="keyword">const</span> *;</div>
+<div class="line">    <span class="keyword">using</span> <a id="a25" name="a25"></a><a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#aaf6f24574956c3da784c678562066aad">reference</a>         = T <span class="keyword">const</span> &amp;;</div>
+<div class="line">    <span class="keyword">using</span> <a id="a26" name="a26"></a><a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a>         = <a id="a27" name="a27"></a><a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#a456a6d2d6eec1041a211b15536783508">MatrixConstIterator</a>;</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#a456a6d2d6eec1041a211b15536783508">MatrixConstIterator</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">int</span> <a id="a28" name="a28"></a><a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#a4eb82a5df2b7e35f7ab3b6c124ad4701">row</a>()<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        <span class="keywordflow">return</span> <a id="a29" name="a29"></a><a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#a6b001b195469f7aa3aa848602f279dc0">getRow</a>(m_flatIndex, this-&gt;<a class="code hl_variable" href="classkso_1_1_matrix.html#ab73668b67906661942b8101b186ae9f9">m_rows</a>);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">int</span> <a id="a30" name="a30"></a><a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#a27e2df768b82148f18f2586d9d220726">col</a>()<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        <span class="keywordflow">return</span> <a id="a31" name="a31"></a><a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#a0d03f6477b16c60ed5ae69ac746c8e1e">getCol</a>(m_flatIndex, this-&gt;<a class="code hl_variable" href="classkso_1_1_matrix.html#a3d53900ec31bbe761666d562c5516d43">m_cols</a>);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#a6b001b195469f7aa3aa848602f279dc0">getRow</a>(<span class="keywordtype">int</span> flatIndex, <span class="keywordtype">int</span> rows)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">return</span> flatIndex / rows;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#a0d03f6477b16c60ed5ae69ac746c8e1e">getCol</a>(<span class="keywordtype">int</span> flatIndex, <span class="keywordtype">int</span> cols)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">return</span> flatIndex % cols;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#aaf6f24574956c3da784c678562066aad">reference</a> <a id="a32" name="a32"></a><a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#a836782ee90f73d58f546f5e26d2a4612">operator*</a>()<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        KSO_MATRIX_CHECK_INDEX(<a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#a4eb82a5df2b7e35f7ab3b6c124ad4701">row</a>(), <a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#a27e2df768b82148f18f2586d9d220726">col</a>(), this-&gt;<a class="code hl_variable" href="classkso_1_1_matrix.html#ab73668b67906661942b8101b186ae9f9">m_rows</a>, this-&gt;<a class="code hl_variable" href="classkso_1_1_matrix.html#a3d53900ec31bbe761666d562c5516d43">m_cols</a>);</div>
+<div class="line">        <span class="keywordflow">return</span> this-&gt;<a class="code hl_function" href="classkso_1_1_matrix.html#af8d995dec90a4c1ba0e298732267c32b">getRef</a>(<a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#a4eb82a5df2b7e35f7ab3b6c124ad4701">row</a>(), <a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#a27e2df768b82148f18f2586d9d220726">col</a>());</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#aa747a2ddfb2f70ebf416b7a9cd7e2117">pointer</a> <a id="a33" name="a33"></a><a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#a86366c844f6baf0bfeed711b024ccd5c">operator-&gt;</a>()<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        <span class="keywordflow">return</span> &amp;**<span class="keyword">this</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#aaf6f24574956c3da784c678562066aad">reference</a> <a id="a34" name="a34"></a><a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#a2e98e50c706bba8a8261998ac5a6040c">operator[]</a>(<a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#a2572f231bf4d68003762f409492325f7">difference_type</a> offset)<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        <span class="keywordflow">return</span> <a class="code hl_function" href="classkso_1_1_matrix.html#af8d995dec90a4c1ba0e298732267c32b">getRef</a>(<a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#a6b001b195469f7aa3aa848602f279dc0">getRow</a>(m_flatIndex + offset, this-&gt;<a class="code hl_variable" href="classkso_1_1_matrix.html#ab73668b67906661942b8101b186ae9f9">m_rows</a>), <a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#a0d03f6477b16c60ed5ae69ac746c8e1e">getCol</a>(m_flatIndex + offset, this-&gt;<a class="code hl_variable" href="classkso_1_1_matrix.html#a3d53900ec31bbe761666d562c5516d43">m_cols</a>));</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> &amp;<a id="a35" name="a35"></a><a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#aaa38983d362687d2a1e724f81e48a158">operator+=</a>(<a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#a2572f231bf4d68003762f409492325f7">difference_type</a> offset)</div>
+<div class="line">    {</div>
+<div class="line">        m_flatIndex += offset;</div>
+<div class="line">        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> &amp;<a id="a36" name="a36"></a><a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#a99d7894d279e4449e3b13ba7e83d8b7e">operator-=</a>(<a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#a2572f231bf4d68003762f409492325f7">difference_type</a> offset)</div>
+<div class="line">    {</div>
+<div class="line">        m_flatIndex -= offset;</div>
+<div class="line">        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> &amp;<a id="a37" name="a37"></a><a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#af70665d6e233c5529a4a7aea6a520713">operator++</a>()</div>
+<div class="line">    {</div>
+<div class="line">        ++m_flatIndex;</div>
+<div class="line">        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> &amp;<a id="a38" name="a38"></a><a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#ac4654d1af21f603709ea3e3a693f0674">operator--</a>()</div>
+<div class="line">    {</div>
+<div class="line">        --m_flatIndex;</div>
+<div class="line">        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> <a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#af70665d6e233c5529a4a7aea6a520713">operator++</a>(<span class="keywordtype">int</span>)</div>
+<div class="line">    {</div>
+<div class="line">        <a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> tmp(*<span class="keyword">this</span>);</div>
+<div class="line">        ++m_flatIndex;</div>
+<div class="line">        <span class="keywordflow">return</span> tmp;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> <a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#ac4654d1af21f603709ea3e3a693f0674">operator--</a>(<span class="keywordtype">int</span>)</div>
+<div class="line">    {</div>
+<div class="line">        <a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> tmp(*<span class="keyword">this</span>);</div>
+<div class="line">        --m_flatIndex;</div>
+<div class="line">        <span class="keywordflow">return</span> tmp;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> <a id="a39" name="a39"></a><a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#a8bf508f84345bee336e057a38cd750a1">operator+</a>(<a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#a2572f231bf4d68003762f409492325f7">difference_type</a> offset)<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        <span class="keywordflow">return</span> <a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a>(*<span class="keyword">this</span>, m_flatIndex + offset);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> <a id="a40" name="a40"></a><a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#ad69b7705814fd628f72cb104fbff7af1">operator-</a>(<a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#a2572f231bf4d68003762f409492325f7">difference_type</a> offset)<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        <span class="keywordflow">return</span> <a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a>(*<span class="keyword">this</span>, m_flatIndex - offset);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">friend</span> <a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> <a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#a8bf508f84345bee336e057a38cd750a1">operator+</a>(<a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#a2572f231bf4d68003762f409492325f7">difference_type</a> offset, <a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> <span class="keyword">const</span> &amp;it)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">return</span> <a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a>(it, it.m_flatIndex + offset);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#a2572f231bf4d68003762f409492325f7">difference_type</a> <a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#ad69b7705814fd628f72cb104fbff7af1">operator-</a>(<a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> <span class="keyword">const</span> &amp;other)<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        <span class="keywordflow">return</span> m_flatIndex - other.<a id="a41" name="a41"></a>m_flatIndex;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">bool</span> <a id="a42" name="a42"></a><a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#a676b74ec4ade6ad96a520ef309495238">operator==</a>(<a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> <span class="keyword">const</span> &amp;other)<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        <span class="keywordflow">return</span> m_flatIndex == other.m_flatIndex;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">bool</span> <a id="a43" name="a43"></a><a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#a751b7c045e45cefd2a2cda16a2288b19">operator!=</a>(<a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> <span class="keyword">const</span> &amp;other)<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        <span class="keywordflow">return</span> m_flatIndex != other.m_flatIndex;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">bool</span> <a id="a44" name="a44"></a><a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#a7be029ca1c30c44fa4cc276a19b22539">operator&gt;</a>(<a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> <span class="keyword">const</span> &amp;other)<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        <span class="keywordflow">return</span> m_flatIndex &gt; other.m_flatIndex;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">bool</span> <a id="a45" name="a45"></a><a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#af01f36216f238edf9abb0445ac469a30">operator&lt;</a>(<a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> <span class="keyword">const</span> &amp;other)<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        <span class="keywordflow">return</span> m_flatIndex &lt; other.m_flatIndex;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">bool</span> <a id="a46" name="a46"></a><a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#ab469d5da4d61fb4f2cb50e9ba5dec09f">operator&gt;=</a>(<a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> <span class="keyword">const</span> &amp;other)<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        <span class="keywordflow">return</span> m_flatIndex &gt;= other.m_flatIndex;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">bool</span> <a id="a47" name="a47"></a><a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#acfa2785d98c942a3563bc4c9f9aff456">operator&lt;=</a>(<a class="code hl_typedef" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> <span class="keyword">const</span> &amp;other)<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        <span class="keywordflow">return</span> m_flatIndex &lt;= other.m_flatIndex;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">explicit</span> <a class="code hl_function" href="classkso_1_1_matrix_const_iterator.html#a456a6d2d6eec1041a211b15536783508">MatrixConstIterator</a>(<a id="a48" name="a48"></a><a class="code hl_friend" href="classkso_1_1_matrix_const_iterator.html#a17fc06682c9f9c46f1e0e38b7af25b80">Matrix&lt;T&gt;</a> <span class="keyword">const</span> &amp;m, <span class="keywordtype">int</span> flatIndex)</div>
+<div class="line">        : <a class="code hl_friend" href="classkso_1_1_matrix_const_iterator.html#a17fc06682c9f9c46f1e0e38b7af25b80">Matrix&lt;T&gt;</a>(m)</div>
+<div class="line">        , m_flatIndex(flatIndex)</div>
+<div class="line">    {</div>
+<div class="line">    }</div>
+<div class="line">};</div>
+<div class="line">} <span class="comment">// namespace kso</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#endif </span><span class="comment">// WEEK04_MATRIX_H</span></div>
+<div class="ttc" id="aclasskso_1_1_matrix_const_iterator_html_a0d03f6477b16c60ed5ae69ac746c8e1e"><div class="ttname"><a href="classkso_1_1_matrix_const_iterator.html#a0d03f6477b16c60ed5ae69ac746c8e1e">kso::MatrixConstIterator::getCol</a></div><div class="ttdeci">static int getCol(int flatIndex, int cols)</div><div class="ttdef"><b>Definition:</b> matrix.h:583</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_const_iterator_html_a17fc06682c9f9c46f1e0e38b7af25b80"><div class="ttname"><a href="classkso_1_1_matrix_const_iterator.html#a17fc06682c9f9c46f1e0e38b7af25b80">kso::MatrixConstIterator::Matrix&lt; T &gt;</a></div><div class="ttdeci">friend class Matrix&lt; T &gt;</div><div class="ttdef"><b>Definition:</b> matrix.h:557</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_const_iterator_html_a2572f231bf4d68003762f409492325f7"><div class="ttname"><a href="classkso_1_1_matrix_const_iterator.html#a2572f231bf4d68003762f409492325f7">kso::MatrixConstIterator::difference_type</a></div><div class="ttdeci">unsigned difference_type</div><div class="ttdef"><b>Definition:</b> matrix.h:561</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_const_iterator_html_a27e2df768b82148f18f2586d9d220726"><div class="ttname"><a href="classkso_1_1_matrix_const_iterator.html#a27e2df768b82148f18f2586d9d220726">kso::MatrixConstIterator::col</a></div><div class="ttdeci">int col() const</div><div class="ttdef"><b>Definition:</b> matrix.h:573</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_const_iterator_html_a2e98e50c706bba8a8261998ac5a6040c"><div class="ttname"><a href="classkso_1_1_matrix_const_iterator.html#a2e98e50c706bba8a8261998ac5a6040c">kso::MatrixConstIterator::operator[]</a></div><div class="ttdeci">reference operator[](difference_type offset) const</div><div class="ttdef"><b>Definition:</b> matrix.h:599</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_const_iterator_html_a456a6d2d6eec1041a211b15536783508"><div class="ttname"><a href="classkso_1_1_matrix_const_iterator.html#a456a6d2d6eec1041a211b15536783508">kso::MatrixConstIterator::MatrixConstIterator</a></div><div class="ttdeci">MatrixConstIterator()=default</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_const_iterator_html_a4eb82a5df2b7e35f7ab3b6c124ad4701"><div class="ttname"><a href="classkso_1_1_matrix_const_iterator.html#a4eb82a5df2b7e35f7ab3b6c124ad4701">kso::MatrixConstIterator::row</a></div><div class="ttdeci">int row() const</div><div class="ttdef"><b>Definition:</b> matrix.h:568</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_const_iterator_html_a676b74ec4ade6ad96a520ef309495238"><div class="ttname"><a href="classkso_1_1_matrix_const_iterator.html#a676b74ec4ade6ad96a520ef309495238">kso::MatrixConstIterator::operator==</a></div><div class="ttdeci">bool operator==(self_type const &amp;other) const</div><div class="ttdef"><b>Definition:</b> matrix.h:662</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_const_iterator_html_a6b001b195469f7aa3aa848602f279dc0"><div class="ttname"><a href="classkso_1_1_matrix_const_iterator.html#a6b001b195469f7aa3aa848602f279dc0">kso::MatrixConstIterator::getRow</a></div><div class="ttdeci">static int getRow(int flatIndex, int rows)</div><div class="ttdef"><b>Definition:</b> matrix.h:578</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_const_iterator_html_a751b7c045e45cefd2a2cda16a2288b19"><div class="ttname"><a href="classkso_1_1_matrix_const_iterator.html#a751b7c045e45cefd2a2cda16a2288b19">kso::MatrixConstIterator::operator!=</a></div><div class="ttdeci">bool operator!=(self_type const &amp;other) const</div><div class="ttdef"><b>Definition:</b> matrix.h:667</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_const_iterator_html_a7be029ca1c30c44fa4cc276a19b22539"><div class="ttname"><a href="classkso_1_1_matrix_const_iterator.html#a7be029ca1c30c44fa4cc276a19b22539">kso::MatrixConstIterator::operator&gt;</a></div><div class="ttdeci">bool operator&gt;(self_type const &amp;other) const</div><div class="ttdef"><b>Definition:</b> matrix.h:672</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_const_iterator_html_a836782ee90f73d58f546f5e26d2a4612"><div class="ttname"><a href="classkso_1_1_matrix_const_iterator.html#a836782ee90f73d58f546f5e26d2a4612">kso::MatrixConstIterator::operator*</a></div><div class="ttdeci">reference operator*() const</div><div class="ttdef"><b>Definition:</b> matrix.h:588</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_const_iterator_html_a86366c844f6baf0bfeed711b024ccd5c"><div class="ttname"><a href="classkso_1_1_matrix_const_iterator.html#a86366c844f6baf0bfeed711b024ccd5c">kso::MatrixConstIterator::operator-&gt;</a></div><div class="ttdeci">pointer operator-&gt;() const</div><div class="ttdef"><b>Definition:</b> matrix.h:594</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_const_iterator_html_a8bf508f84345bee336e057a38cd750a1"><div class="ttname"><a href="classkso_1_1_matrix_const_iterator.html#a8bf508f84345bee336e057a38cd750a1">kso::MatrixConstIterator::operator+</a></div><div class="ttdeci">self_type operator+(difference_type offset) const</div><div class="ttdef"><b>Definition:</b> matrix.h:642</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_const_iterator_html_a99d7894d279e4449e3b13ba7e83d8b7e"><div class="ttname"><a href="classkso_1_1_matrix_const_iterator.html#a99d7894d279e4449e3b13ba7e83d8b7e">kso::MatrixConstIterator::operator-=</a></div><div class="ttdeci">self_type &amp; operator-=(difference_type offset)</div><div class="ttdef"><b>Definition:</b> matrix.h:610</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_const_iterator_html_aa747a2ddfb2f70ebf416b7a9cd7e2117"><div class="ttname"><a href="classkso_1_1_matrix_const_iterator.html#aa747a2ddfb2f70ebf416b7a9cd7e2117">kso::MatrixConstIterator::pointer</a></div><div class="ttdeci">T const * pointer</div><div class="ttdef"><b>Definition:</b> matrix.h:562</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_const_iterator_html_aaa38983d362687d2a1e724f81e48a158"><div class="ttname"><a href="classkso_1_1_matrix_const_iterator.html#aaa38983d362687d2a1e724f81e48a158">kso::MatrixConstIterator::operator+=</a></div><div class="ttdeci">self_type &amp; operator+=(difference_type offset)</div><div class="ttdef"><b>Definition:</b> matrix.h:604</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_const_iterator_html_aaf6f24574956c3da784c678562066aad"><div class="ttname"><a href="classkso_1_1_matrix_const_iterator.html#aaf6f24574956c3da784c678562066aad">kso::MatrixConstIterator::reference</a></div><div class="ttdeci">T const &amp; reference</div><div class="ttdef"><b>Definition:</b> matrix.h:563</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_const_iterator_html_ab469d5da4d61fb4f2cb50e9ba5dec09f"><div class="ttname"><a href="classkso_1_1_matrix_const_iterator.html#ab469d5da4d61fb4f2cb50e9ba5dec09f">kso::MatrixConstIterator::operator&gt;=</a></div><div class="ttdeci">bool operator&gt;=(self_type const &amp;other) const</div><div class="ttdef"><b>Definition:</b> matrix.h:682</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_const_iterator_html_ac4654d1af21f603709ea3e3a693f0674"><div class="ttname"><a href="classkso_1_1_matrix_const_iterator.html#ac4654d1af21f603709ea3e3a693f0674">kso::MatrixConstIterator::operator--</a></div><div class="ttdeci">self_type &amp; operator--()</div><div class="ttdef"><b>Definition:</b> matrix.h:622</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_const_iterator_html_acfa2785d98c942a3563bc4c9f9aff456"><div class="ttname"><a href="classkso_1_1_matrix_const_iterator.html#acfa2785d98c942a3563bc4c9f9aff456">kso::MatrixConstIterator::operator&lt;=</a></div><div class="ttdeci">bool operator&lt;=(self_type const &amp;other) const</div><div class="ttdef"><b>Definition:</b> matrix.h:687</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_const_iterator_html_ad69b7705814fd628f72cb104fbff7af1"><div class="ttname"><a href="classkso_1_1_matrix_const_iterator.html#ad69b7705814fd628f72cb104fbff7af1">kso::MatrixConstIterator::operator-</a></div><div class="ttdeci">self_type operator-(difference_type offset) const</div><div class="ttdef"><b>Definition:</b> matrix.h:647</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_const_iterator_html_ae04e616e25795abdf3eb1049a4fd2614"><div class="ttname"><a href="classkso_1_1_matrix_const_iterator.html#ae04e616e25795abdf3eb1049a4fd2614">kso::MatrixConstIterator::iterator_category</a></div><div class="ttdeci">std::random_access_iterator_tag iterator_category</div><div class="ttdef"><b>Definition:</b> matrix.h:559</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_const_iterator_html_aeb5048761bf9266085484ec46f21402c"><div class="ttname"><a href="classkso_1_1_matrix_const_iterator.html#aeb5048761bf9266085484ec46f21402c">kso::MatrixConstIterator::value_type</a></div><div class="ttdeci">T value_type</div><div class="ttdef"><b>Definition:</b> matrix.h:560</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_const_iterator_html_aeea835a6964294d2227be93426138c61"><div class="ttname"><a href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">kso::MatrixConstIterator::self_type</a></div><div class="ttdeci">MatrixConstIterator self_type</div><div class="ttdef"><b>Definition:</b> matrix.h:564</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_const_iterator_html_af01f36216f238edf9abb0445ac469a30"><div class="ttname"><a href="classkso_1_1_matrix_const_iterator.html#af01f36216f238edf9abb0445ac469a30">kso::MatrixConstIterator::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(self_type const &amp;other) const</div><div class="ttdef"><b>Definition:</b> matrix.h:677</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_const_iterator_html_af70665d6e233c5529a4a7aea6a520713"><div class="ttname"><a href="classkso_1_1_matrix_const_iterator.html#af70665d6e233c5529a4a7aea6a520713">kso::MatrixConstIterator::operator++</a></div><div class="ttdeci">self_type &amp; operator++()</div><div class="ttdef"><b>Definition:</b> matrix.h:616</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_html_a0852c995891943eab307b60963d44608"><div class="ttname"><a href="classkso_1_1_matrix.html#a0852c995891943eab307b60963d44608">kso::Matrix::begin</a></div><div class="ttdeci">MatrixConstIterator&lt; T &gt; begin() const</div><div class="ttdef"><b>Definition:</b> matrix.h:353</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_html_a136442bf2dea538ab8e559a94ec80dd1"><div class="ttname"><a href="classkso_1_1_matrix.html#a136442bf2dea538ab8e559a94ec80dd1">kso::Matrix::m_colStride</a></div><div class="ttdeci">int m_colStride</div><div class="ttdoc">列步长</div><div class="ttdef"><b>Definition:</b> matrix.h:374</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_html_a161846b28c4dbdd01ecd094a3a7096c0"><div class="ttname"><a href="classkso_1_1_matrix.html#a161846b28c4dbdd01ecd094a3a7096c0">kso::Matrix::size</a></div><div class="ttdeci">int size() const</div><div class="ttdoc">返回矩阵中的元素数量</div><div class="ttdef"><b>Definition:</b> matrix.h:142</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_html_a1be75bf122edcec9af3ff202d25ac6b6"><div class="ttname"><a href="classkso_1_1_matrix.html#a1be75bf122edcec9af3ff202d25ac6b6">kso::Matrix::Matrix</a></div><div class="ttdeci">Matrix()</div><div class="ttdoc">默认构造</div><div class="ttdef"><b>Definition:</b> matrix.h:83</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_html_a1c7a0814c3d2673eef61a703b6758d0e"><div class="ttname"><a href="classkso_1_1_matrix.html#a1c7a0814c3d2673eef61a703b6758d0e">kso::Matrix::m_rowStride</a></div><div class="ttdeci">int m_rowStride</div><div class="ttdoc">行步长</div><div class="ttdef"><b>Definition:</b> matrix.h:372</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_html_a286ec6fc82230535737720ddf11be9dc"><div class="ttname"><a href="classkso_1_1_matrix.html#a286ec6fc82230535737720ddf11be9dc">kso::Matrix::end</a></div><div class="ttdeci">MatrixConstIterator&lt; T &gt; end() const</div><div class="ttdef"><b>Definition:</b> matrix.h:358</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_html_a3061ada0e21b4935ee1bfe46cab7ae79"><div class="ttname"><a href="classkso_1_1_matrix.html#a3061ada0e21b4935ee1bfe46cab7ae79">kso::Matrix::get</a></div><div class="ttdeci">T get(int row, int col) const</div><div class="ttdoc">取得指定元素</div><div class="ttdef"><b>Definition:</b> matrix.h:135</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_html_a399af6cbe4b628277d704111ef4a21f7"><div class="ttname"><a href="classkso_1_1_matrix.html#a399af6cbe4b628277d704111ef4a21f7">kso::Matrix::set</a></div><div class="ttdeci">void set(int row, int col, T value)</div><div class="ttdef"><b>Definition:</b> matrix.h:297</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_html_a3d53900ec31bbe761666d562c5516d43"><div class="ttname"><a href="classkso_1_1_matrix.html#a3d53900ec31bbe761666d562c5516d43">kso::Matrix::m_cols</a></div><div class="ttdeci">int m_cols</div><div class="ttdoc">列数</div><div class="ttdef"><b>Definition:</b> matrix.h:370</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_html_a611ec350479a9f8388d21caa29dbde94"><div class="ttname"><a href="classkso_1_1_matrix.html#a611ec350479a9f8388d21caa29dbde94">kso::Matrix::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;stream, Matrix const &amp;m)</div><div class="ttdef"><b>Definition:</b> matrix.h:336</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_html_a726008be06b75bf05ca4c1701806b34a"><div class="ttname"><a href="classkso_1_1_matrix.html#a726008be06b75bf05ca4c1701806b34a">kso::Matrix::reshape</a></div><div class="ttdeci">Matrix reshape(int rows, int cols) const</div><div class="ttdef"><b>Definition:</b> matrix.h:172</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_html_a8cc4ec5a3f960a9cac920265379fb4bf"><div class="ttname"><a href="classkso_1_1_matrix.html#a8cc4ec5a3f960a9cac920265379fb4bf">kso::Matrix::doBinaryOperation</a></div><div class="ttdeci">friend Matrix doBinaryOperation(Matrix const &amp;a, Matrix const &amp;b, T(*op)(T a, T b))</div><div class="ttdef"><b>Definition:</b> matrix.h:224</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_html_ab73668b67906661942b8101b186ae9f9"><div class="ttname"><a href="classkso_1_1_matrix.html#ab73668b67906661942b8101b186ae9f9">kso::Matrix::m_rows</a></div><div class="ttdeci">int m_rows</div><div class="ttdoc">行数</div><div class="ttdef"><b>Definition:</b> matrix.h:368</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_html_abd0d1c2329f003028b8bbdc4d9f16fdb"><div class="ttname"><a href="classkso_1_1_matrix.html#abd0d1c2329f003028b8bbdc4d9f16fdb">kso::Matrix::doUnaryOperation</a></div><div class="ttdeci">friend Matrix doUnaryOperation(Matrix const &amp;lhs, T(*op)(T))</div><div class="ttdef"><b>Definition:</b> matrix.h:253</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_html_acd84b104d38f04569dbb357d0ce4eb15"><div class="ttname"><a href="classkso_1_1_matrix.html#acd84b104d38f04569dbb357d0ce4eb15">kso::Matrix::doBinaryOperationInplace</a></div><div class="ttdeci">Matrix &amp; doBinaryOperationInplace(Matrix const &amp;m, T(*op)(T a, T b))</div><div class="ttdef"><b>Definition:</b> matrix.h:304</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_html_ad76fb243ff22434be4fd9f3bf9855d21"><div class="ttname"><a href="classkso_1_1_matrix.html#ad76fb243ff22434be4fd9f3bf9855d21">kso::Matrix::matmul</a></div><div class="ttdeci">friend Matrix matmul(Matrix const &amp;a, Matrix const &amp;b)</div><div class="ttdef"><b>Definition:</b> matrix.h:200</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_html_ae3cd5aa7f59c7725b7d20dc3bae72213"><div class="ttname"><a href="classkso_1_1_matrix.html#ae3cd5aa7f59c7725b7d20dc3bae72213">kso::Matrix::fill</a></div><div class="ttdeci">Matrix fill(T num)</div><div class="ttdef"><b>Definition:</b> matrix.h:287</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_html_ae6d0c4f648af8c51d774083805de4d91"><div class="ttname"><a href="classkso_1_1_matrix.html#ae6d0c4f648af8c51d774083805de4d91">kso::Matrix::dot</a></div><div class="ttdeci">Matrix dot(Matrix const &amp;a)</div><div class="ttdef"><b>Definition:</b> matrix.h:219</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_html_aecf23ad30fa7118d4402d1a47a638aa6"><div class="ttname"><a href="classkso_1_1_matrix.html#aecf23ad30fa7118d4402d1a47a638aa6">kso::Matrix::transpose</a></div><div class="ttdeci">Matrix transpose() const</div><div class="ttdef"><b>Definition:</b> matrix.h:167</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_html_af0817206c9612a97d32727ca182abbda"><div class="ttname"><a href="classkso_1_1_matrix.html#af0817206c9612a97d32727ca182abbda">kso::Matrix::m_data</a></div><div class="ttdeci">StoragePtr m_data</div><div class="ttdef"><b>Definition:</b> matrix.h:366</div></div>
+<div class="ttc" id="aclasskso_1_1_matrix_html_af8d995dec90a4c1ba0e298732267c32b"><div class="ttname"><a href="classkso_1_1_matrix.html#af8d995dec90a4c1ba0e298732267c32b">kso::Matrix::getRef</a></div><div class="ttdeci">T &amp; getRef(int row, int col)</div><div class="ttdef"><b>Definition:</b> matrix.h:148</div></div>
+<div class="ttc" id="anamespacekso_html"><div class="ttname"><a href="namespacekso.html">kso</a></div><div class="ttdef"><b>Definition:</b> matrix.h:43</div></div>
+</div><!-- fragment --> </div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+</body>
+</html>

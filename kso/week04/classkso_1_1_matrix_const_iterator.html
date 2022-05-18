@@ -1,0 +1,1193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Week 4 Task: kso::MatrixConstIterator&lt; T &gt; 模板类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Week 4 Task
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classkso_1_1_matrix_const_iterator.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#friends">友元</a> &#124;
+<a href="classkso_1_1_matrix_const_iterator-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">kso::MatrixConstIterator&lt; T &gt; 模板类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>矩阵迭代器  
+ <a href="classkso_1_1_matrix_const_iterator.html#details">更多...</a></p>
+
+<p><code>#include &lt;matrixiterator.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:ae04e616e25795abdf3eb1049a4fd2614"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#ae04e616e25795abdf3eb1049a4fd2614">iterator_category</a> = std::random_access_iterator_tag</td></tr>
+<tr class="separator:ae04e616e25795abdf3eb1049a4fd2614"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb5048761bf9266085484ec46f21402c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aeb5048761bf9266085484ec46f21402c">value_type</a> = T</td></tr>
+<tr class="separator:aeb5048761bf9266085484ec46f21402c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2572f231bf4d68003762f409492325f7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#a2572f231bf4d68003762f409492325f7">difference_type</a> = unsigned</td></tr>
+<tr class="separator:a2572f231bf4d68003762f409492325f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa747a2ddfb2f70ebf416b7a9cd7e2117"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aa747a2ddfb2f70ebf416b7a9cd7e2117">pointer</a> = T const *</td></tr>
+<tr class="separator:aa747a2ddfb2f70ebf416b7a9cd7e2117"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf6f24574956c3da784c678562066aad"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aaf6f24574956c3da784c678562066aad">reference</a> = T const &amp;</td></tr>
+<tr class="separator:aaf6f24574956c3da784c678562066aad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeea835a6964294d2227be93426138c61"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> = <a class="el" href="classkso_1_1_matrix_const_iterator.html">MatrixConstIterator</a></td></tr>
+<tr class="separator:aeea835a6964294d2227be93426138c61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f58ff2ea17df620b591dcdace03bda8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#a2f58ff2ea17df620b591dcdace03bda8">Storage</a> = typename <a class="el" href="classkso_1_1_matrix.html">Matrix</a>&lt; T &gt;::Storage</td></tr>
+<tr class="separator:a2f58ff2ea17df620b591dcdace03bda8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ce9e330c88b78b8f2932111964ec789"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#a9ce9e330c88b78b8f2932111964ec789">StorageWeakPtr</a> = std::weak_ptr&lt; <a class="el" href="classkso_1_1_matrix_const_iterator.html#a2f58ff2ea17df620b591dcdace03bda8">Storage</a> &gt;</td></tr>
+<tr class="separator:a9ce9e330c88b78b8f2932111964ec789"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a456a6d2d6eec1041a211b15536783508"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#a456a6d2d6eec1041a211b15536783508">MatrixConstIterator</a> ()=default</td></tr>
+<tr class="separator:a456a6d2d6eec1041a211b15536783508"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2c8bdee989ebe57944fed6c0fe0721e"><td class="memItemLeft" align="right" valign="top">T const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#ad2c8bdee989ebe57944fed6c0fe0721e">get</a> () const</td></tr>
+<tr class="separator:ad2c8bdee989ebe57944fed6c0fe0721e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d0ea8b38e5e8f576e6a351a6b763c9d"><td class="memItemLeft" align="right" valign="top">T const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#a0d0ea8b38e5e8f576e6a351a6b763c9d">get</a> (int r, int c) const</td></tr>
+<tr class="separator:a0d0ea8b38e5e8f576e6a351a6b763c9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe2b12a308bc0907e9faff36cbdff931"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#abe2b12a308bc0907e9faff36cbdff931">isValid</a> () const</td></tr>
+<tr class="separator:abe2b12a308bc0907e9faff36cbdff931"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4461e13a9a2414fd9c5c93be12923674"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#a4461e13a9a2414fd9c5c93be12923674">operator bool</a> () const</td></tr>
+<tr class="separator:a4461e13a9a2414fd9c5c93be12923674"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eb82a5df2b7e35f7ab3b6c124ad4701"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#a4eb82a5df2b7e35f7ab3b6c124ad4701">row</a> () const</td></tr>
+<tr class="separator:a4eb82a5df2b7e35f7ab3b6c124ad4701"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27e2df768b82148f18f2586d9d220726"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#a27e2df768b82148f18f2586d9d220726">col</a> () const</td></tr>
+<tr class="separator:a27e2df768b82148f18f2586d9d220726"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a836782ee90f73d58f546f5e26d2a4612"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aaf6f24574956c3da784c678562066aad">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#a836782ee90f73d58f546f5e26d2a4612">operator*</a> () const</td></tr>
+<tr class="separator:a836782ee90f73d58f546f5e26d2a4612"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86366c844f6baf0bfeed711b024ccd5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aa747a2ddfb2f70ebf416b7a9cd7e2117">pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#a86366c844f6baf0bfeed711b024ccd5c">operator-&gt;</a> () const</td></tr>
+<tr class="separator:a86366c844f6baf0bfeed711b024ccd5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e98e50c706bba8a8261998ac5a6040c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aaf6f24574956c3da784c678562066aad">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#a2e98e50c706bba8a8261998ac5a6040c">operator[]</a> (<a class="el" href="classkso_1_1_matrix_const_iterator.html#a2572f231bf4d68003762f409492325f7">difference_type</a> offset) const</td></tr>
+<tr class="separator:a2e98e50c706bba8a8261998ac5a6040c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa38983d362687d2a1e724f81e48a158"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aaa38983d362687d2a1e724f81e48a158">operator+=</a> (<a class="el" href="classkso_1_1_matrix_const_iterator.html#a2572f231bf4d68003762f409492325f7">difference_type</a> offset)</td></tr>
+<tr class="separator:aaa38983d362687d2a1e724f81e48a158"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99d7894d279e4449e3b13ba7e83d8b7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#a99d7894d279e4449e3b13ba7e83d8b7e">operator-=</a> (<a class="el" href="classkso_1_1_matrix_const_iterator.html#a2572f231bf4d68003762f409492325f7">difference_type</a> offset)</td></tr>
+<tr class="separator:a99d7894d279e4449e3b13ba7e83d8b7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af70665d6e233c5529a4a7aea6a520713"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#af70665d6e233c5529a4a7aea6a520713">operator++</a> ()</td></tr>
+<tr class="separator:af70665d6e233c5529a4a7aea6a520713"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4654d1af21f603709ea3e3a693f0674"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#ac4654d1af21f603709ea3e3a693f0674">operator--</a> ()</td></tr>
+<tr class="separator:ac4654d1af21f603709ea3e3a693f0674"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d3a6cc1344a8aaed434cb89cbc70ab5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#a8d3a6cc1344a8aaed434cb89cbc70ab5">operator++</a> (int)</td></tr>
+<tr class="separator:a8d3a6cc1344a8aaed434cb89cbc70ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5708bb3175507aa61f9b27899a9ffee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#ae5708bb3175507aa61f9b27899a9ffee">operator--</a> (int)</td></tr>
+<tr class="separator:ae5708bb3175507aa61f9b27899a9ffee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bf508f84345bee336e057a38cd750a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#a8bf508f84345bee336e057a38cd750a1">operator+</a> (<a class="el" href="classkso_1_1_matrix_const_iterator.html#a2572f231bf4d68003762f409492325f7">difference_type</a> offset) const</td></tr>
+<tr class="separator:a8bf508f84345bee336e057a38cd750a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad69b7705814fd628f72cb104fbff7af1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#ad69b7705814fd628f72cb104fbff7af1">operator-</a> (<a class="el" href="classkso_1_1_matrix_const_iterator.html#a2572f231bf4d68003762f409492325f7">difference_type</a> offset) const</td></tr>
+<tr class="separator:ad69b7705814fd628f72cb104fbff7af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76c9f79512a0afcf2337be9680480a57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_matrix_const_iterator.html#a2572f231bf4d68003762f409492325f7">difference_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#a76c9f79512a0afcf2337be9680480a57">operator-</a> (<a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> const &amp;other) const</td></tr>
+<tr class="separator:a76c9f79512a0afcf2337be9680480a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a676b74ec4ade6ad96a520ef309495238"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#a676b74ec4ade6ad96a520ef309495238">operator==</a> (<a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> const &amp;other) const</td></tr>
+<tr class="separator:a676b74ec4ade6ad96a520ef309495238"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a751b7c045e45cefd2a2cda16a2288b19"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#a751b7c045e45cefd2a2cda16a2288b19">operator!=</a> (<a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> const &amp;other) const</td></tr>
+<tr class="separator:a751b7c045e45cefd2a2cda16a2288b19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7be029ca1c30c44fa4cc276a19b22539"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#a7be029ca1c30c44fa4cc276a19b22539">operator&gt;</a> (<a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> const &amp;other) const</td></tr>
+<tr class="separator:a7be029ca1c30c44fa4cc276a19b22539"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af01f36216f238edf9abb0445ac469a30"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#af01f36216f238edf9abb0445ac469a30">operator&lt;</a> (<a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> const &amp;other) const</td></tr>
+<tr class="separator:af01f36216f238edf9abb0445ac469a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab469d5da4d61fb4f2cb50e9ba5dec09f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#ab469d5da4d61fb4f2cb50e9ba5dec09f">operator&gt;=</a> (<a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> const &amp;other) const</td></tr>
+<tr class="separator:ab469d5da4d61fb4f2cb50e9ba5dec09f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfa2785d98c942a3563bc4c9f9aff456"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#acfa2785d98c942a3563bc4c9f9aff456">operator&lt;=</a> (<a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> const &amp;other) const</td></tr>
+<tr class="separator:acfa2785d98c942a3563bc4c9f9aff456"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a81104c7366605a7fe3fe4872c4df5af0"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#a81104c7366605a7fe3fe4872c4df5af0">row</a> (int flatIndex, int, int cols)</td></tr>
+<tr class="separator:a81104c7366605a7fe3fe4872c4df5af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a484c45a10a96acd935133be55afc1c4d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#a484c45a10a96acd935133be55afc1c4d">col</a> (int flatIndex, int, int cols)</td></tr>
+<tr class="separator:a484c45a10a96acd935133be55afc1c4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:a17fc06682c9f9c46f1e0e38b7af25b80"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#a17fc06682c9f9c46f1e0e38b7af25b80">Matrix&lt; T &gt;</a></td></tr>
+<tr class="separator:a17fc06682c9f9c46f1e0e38b7af25b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbd1e8d821445ac8bcb911cd216dbbdc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_matrix_const_iterator.html#abbd1e8d821445ac8bcb911cd216dbbdc">operator+</a> (<a class="el" href="classkso_1_1_matrix_const_iterator.html#a2572f231bf4d68003762f409492325f7">difference_type</a> offset, <a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> const &amp;it)</td></tr>
+<tr class="separator:abbd1e8d821445ac8bcb911cd216dbbdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+class kso::MatrixConstIterator&lt; T &gt;</div><p >矩阵迭代器 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>标量类型 迭代器构成对数据的弱引用（基于 std::weak_ptr 实现）。当数据无强引用（见 <a class="el" href="classkso_1_1_matrix.html" title="矩阵。本类支持copy-on-write，在不修改的前提下，拷贝的开销很低。">Matrix</a> ）时， 即被回收，迭代器无效化）。可用 <a class="el" href="classkso_1_1_matrix_const_iterator.html#abe2b12a308bc0907e9faff36cbdff931">isValid()</a> 函数判断迭代器是否有效。</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>迭代器是一行一行选择元素的。如果要一列一列选择，请调用（ <a class="el" href="classkso_1_1_matrix.html#aecf23ad30fa7118d4402d1a47a638aa6">Matrix::transpose()</a> ） 来转置视图。 </p><dl class="section see"><dt>参见</dt><dd><a class="el" href="classkso_1_1_matrix.html" title="矩阵。本类支持copy-on-write，在不修改的前提下，拷贝的开销很低。">Matrix</a> </dd></dl>
+</div><h2 class="groupheader">成员类型定义说明</h2>
+<a id="a2572f231bf4d68003762f409492325f7" name="a2572f231bf4d68003762f409492325f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2572f231bf4d68003762f409492325f7">&#9670;&nbsp;</a></span>difference_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::difference_type =  unsigned</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae04e616e25795abdf3eb1049a4fd2614" name="ae04e616e25795abdf3eb1049a4fd2614"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae04e616e25795abdf3eb1049a4fd2614">&#9670;&nbsp;</a></span>iterator_category</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::iterator_category =  std::random_access_iterator_tag</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa747a2ddfb2f70ebf416b7a9cd7e2117" name="aa747a2ddfb2f70ebf416b7a9cd7e2117"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa747a2ddfb2f70ebf416b7a9cd7e2117">&#9670;&nbsp;</a></span>pointer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::pointer =  T const *</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf6f24574956c3da784c678562066aad" name="aaf6f24574956c3da784c678562066aad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf6f24574956c3da784c678562066aad">&#9670;&nbsp;</a></span>reference</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::reference =  T const &amp;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeea835a6964294d2227be93426138c61" name="aeea835a6964294d2227be93426138c61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeea835a6964294d2227be93426138c61">&#9670;&nbsp;</a></span>self_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::self_type =  <a class="el" href="classkso_1_1_matrix_const_iterator.html">MatrixConstIterator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f58ff2ea17df620b591dcdace03bda8" name="a2f58ff2ea17df620b591dcdace03bda8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f58ff2ea17df620b591dcdace03bda8">&#9670;&nbsp;</a></span>Storage</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::Storage =  typename <a class="el" href="classkso_1_1_matrix.html">Matrix</a>&lt;T&gt;::Storage</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9ce9e330c88b78b8f2932111964ec789" name="a9ce9e330c88b78b8f2932111964ec789"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ce9e330c88b78b8f2932111964ec789">&#9670;&nbsp;</a></span>StorageWeakPtr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::StorageWeakPtr =  std::weak_ptr&lt;<a class="el" href="classkso_1_1_matrix_const_iterator.html#a2f58ff2ea17df620b591dcdace03bda8">Storage</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb5048761bf9266085484ec46f21402c" name="aeb5048761bf9266085484ec46f21402c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb5048761bf9266085484ec46f21402c">&#9670;&nbsp;</a></span>value_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::value_type =  T</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a456a6d2d6eec1041a211b15536783508" name="a456a6d2d6eec1041a211b15536783508"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a456a6d2d6eec1041a211b15536783508">&#9670;&nbsp;</a></span>MatrixConstIterator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::MatrixConstIterator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a27e2df768b82148f18f2586d9d220726" name="a27e2df768b82148f18f2586d9d220726"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27e2df768b82148f18f2586d9d220726">&#9670;&nbsp;</a></span>col() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::col </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a484c45a10a96acd935133be55afc1c4d" name="a484c45a10a96acd935133be55afc1c4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a484c45a10a96acd935133be55afc1c4d">&#9670;&nbsp;</a></span>col() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::col </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flatIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cols</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad2c8bdee989ebe57944fed6c0fe0721e" name="ad2c8bdee989ebe57944fed6c0fe0721e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2c8bdee989ebe57944fed6c0fe0721e">&#9670;&nbsp;</a></span>get() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T const  &amp; <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d0ea8b38e5e8f576e6a351a6b763c9d" name="a0d0ea8b38e5e8f576e6a351a6b763c9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d0ea8b38e5e8f576e6a351a6b763c9d">&#9670;&nbsp;</a></span>get() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T const  &amp; <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::get </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe2b12a308bc0907e9faff36cbdff931" name="abe2b12a308bc0907e9faff36cbdff931"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe2b12a308bc0907e9faff36cbdff931">&#9670;&nbsp;</a></span>isValid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::isValid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4461e13a9a2414fd9c5c93be12923674" name="a4461e13a9a2414fd9c5c93be12923674"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4461e13a9a2414fd9c5c93be12923674">&#9670;&nbsp;</a></span>operator bool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::operator bool </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a751b7c045e45cefd2a2cda16a2288b19" name="a751b7c045e45cefd2a2cda16a2288b19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a751b7c045e45cefd2a2cda16a2288b19">&#9670;&nbsp;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::operator!= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> const &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a836782ee90f73d58f546f5e26d2a4612" name="a836782ee90f73d58f546f5e26d2a4612"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a836782ee90f73d58f546f5e26d2a4612">&#9670;&nbsp;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aaf6f24574956c3da784c678562066aad">reference</a> <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::operator* </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8bf508f84345bee336e057a38cd750a1" name="a8bf508f84345bee336e057a38cd750a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bf508f84345bee336e057a38cd750a1">&#9670;&nbsp;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::operator+ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_matrix_const_iterator.html#a2572f231bf4d68003762f409492325f7">difference_type</a>&#160;</td>
+          <td class="paramname"><em>offset</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af70665d6e233c5529a4a7aea6a520713" name="af70665d6e233c5529a4a7aea6a520713"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af70665d6e233c5529a4a7aea6a520713">&#9670;&nbsp;</a></span>operator++() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> &amp; <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::operator++ </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d3a6cc1344a8aaed434cb89cbc70ab5" name="a8d3a6cc1344a8aaed434cb89cbc70ab5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d3a6cc1344a8aaed434cb89cbc70ab5">&#9670;&nbsp;</a></span>operator++() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::operator++ </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa38983d362687d2a1e724f81e48a158" name="aaa38983d362687d2a1e724f81e48a158"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa38983d362687d2a1e724f81e48a158">&#9670;&nbsp;</a></span>operator+=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> &amp; <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::operator+= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_matrix_const_iterator.html#a2572f231bf4d68003762f409492325f7">difference_type</a>&#160;</td>
+          <td class="paramname"><em>offset</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad69b7705814fd628f72cb104fbff7af1" name="ad69b7705814fd628f72cb104fbff7af1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad69b7705814fd628f72cb104fbff7af1">&#9670;&nbsp;</a></span>operator-() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::operator- </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_matrix_const_iterator.html#a2572f231bf4d68003762f409492325f7">difference_type</a>&#160;</td>
+          <td class="paramname"><em>offset</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a76c9f79512a0afcf2337be9680480a57" name="a76c9f79512a0afcf2337be9680480a57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76c9f79512a0afcf2337be9680480a57">&#9670;&nbsp;</a></span>operator-() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_matrix_const_iterator.html#a2572f231bf4d68003762f409492325f7">difference_type</a> <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::operator- </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> const &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac4654d1af21f603709ea3e3a693f0674" name="ac4654d1af21f603709ea3e3a693f0674"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4654d1af21f603709ea3e3a693f0674">&#9670;&nbsp;</a></span>operator--() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> &amp; <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::operator-- </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae5708bb3175507aa61f9b27899a9ffee" name="ae5708bb3175507aa61f9b27899a9ffee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5708bb3175507aa61f9b27899a9ffee">&#9670;&nbsp;</a></span>operator--() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::operator-- </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99d7894d279e4449e3b13ba7e83d8b7e" name="a99d7894d279e4449e3b13ba7e83d8b7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99d7894d279e4449e3b13ba7e83d8b7e">&#9670;&nbsp;</a></span>operator-=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> &amp; <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::operator-= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_matrix_const_iterator.html#a2572f231bf4d68003762f409492325f7">difference_type</a>&#160;</td>
+          <td class="paramname"><em>offset</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86366c844f6baf0bfeed711b024ccd5c" name="a86366c844f6baf0bfeed711b024ccd5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86366c844f6baf0bfeed711b024ccd5c">&#9670;&nbsp;</a></span>operator-&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aa747a2ddfb2f70ebf416b7a9cd7e2117">pointer</a> <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::operator-&gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af01f36216f238edf9abb0445ac469a30" name="af01f36216f238edf9abb0445ac469a30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af01f36216f238edf9abb0445ac469a30">&#9670;&nbsp;</a></span>operator&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> const &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acfa2785d98c942a3563bc4c9f9aff456" name="acfa2785d98c942a3563bc4c9f9aff456"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfa2785d98c942a3563bc4c9f9aff456">&#9670;&nbsp;</a></span>operator&lt;=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::operator&lt;= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> const &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a676b74ec4ade6ad96a520ef309495238" name="a676b74ec4ade6ad96a520ef309495238"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a676b74ec4ade6ad96a520ef309495238">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> const &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7be029ca1c30c44fa4cc276a19b22539" name="a7be029ca1c30c44fa4cc276a19b22539"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7be029ca1c30c44fa4cc276a19b22539">&#9670;&nbsp;</a></span>operator&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::operator&gt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> const &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab469d5da4d61fb4f2cb50e9ba5dec09f" name="ab469d5da4d61fb4f2cb50e9ba5dec09f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab469d5da4d61fb4f2cb50e9ba5dec09f">&#9670;&nbsp;</a></span>operator&gt;=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::operator&gt;= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> const &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e98e50c706bba8a8261998ac5a6040c" name="a2e98e50c706bba8a8261998ac5a6040c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e98e50c706bba8a8261998ac5a6040c">&#9670;&nbsp;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aaf6f24574956c3da784c678562066aad">reference</a> <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_matrix_const_iterator.html#a2572f231bf4d68003762f409492325f7">difference_type</a>&#160;</td>
+          <td class="paramname"><em>offset</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4eb82a5df2b7e35f7ab3b6c124ad4701" name="a4eb82a5df2b7e35f7ab3b6c124ad4701"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eb82a5df2b7e35f7ab3b6c124ad4701">&#9670;&nbsp;</a></span>row() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::row </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a81104c7366605a7fe3fe4872c4df5af0" name="a81104c7366605a7fe3fe4872c4df5af0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81104c7366605a7fe3fe4872c4df5af0">&#9670;&nbsp;</a></span>row() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int <a class="el" href="classkso_1_1_matrix_const_iterator.html">kso::MatrixConstIterator</a>&lt; T &gt;::row </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flatIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cols</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">友元及相关函数文档</h2>
+<a id="a17fc06682c9f9c46f1e0e38b7af25b80" name="a17fc06682c9f9c46f1e0e38b7af25b80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17fc06682c9f9c46f1e0e38b7af25b80">&#9670;&nbsp;</a></span>Matrix&lt; T &gt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classkso_1_1_matrix.html">Matrix</a>&lt; T &gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abbd1e8d821445ac8bcb911cd216dbbdc" name="abbd1e8d821445ac8bcb911cd216dbbdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbd1e8d821445ac8bcb911cd216dbbdc">&#9670;&nbsp;</a></span>operator+</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> operator+ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_matrix_const_iterator.html#a2572f231bf4d68003762f409492325f7">difference_type</a>&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_matrix_const_iterator.html#aeea835a6964294d2227be93426138c61">self_type</a> const &amp;&#160;</td>
+          <td class="paramname"><em>it</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>D:/Projects/KSOfficeCpp/yangerhang/week04/include/matrix.h</li>
+<li>D:/Projects/KSOfficeCpp/yangerhang/week04/include/matrixiterator.h</li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacekso.html">kso</a></li><li class="navelem"><a class="el" href="classkso_1_1_matrix_const_iterator.html">MatrixConstIterator</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+</body>
+</html>
