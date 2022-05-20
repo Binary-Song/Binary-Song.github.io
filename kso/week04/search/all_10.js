@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['week_204_20作业_0',['Week 4 作业',['../index.html',1,'']]]
+  ['value_5ftype_0',['value_type',['../classkso_1_1_matrix_const_iterator.html#aeb5048761bf9266085484ec46f21402c',1,'kso::MatrixConstIterator']]]
 ];

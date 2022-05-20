@@ -86,6 +86,7 @@ $(document).ready(function(){initNavTree('classkso_1_1_sparse_matrix.html',''); 
   <div class="summary">
 <a href="#pub-types">Public 类型</a> &#124;
 <a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="#friends">友元</a> &#124;
 <a href="classkso_1_1_sparse_matrix-members.html">所有成员列表</a>  </div>
   <div class="headertitle"><div class="title">kso::SparseMatrix&lt; T &gt; 模板类 参考</div></div>
@@ -109,15 +110,39 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:abc48a4c111dc95bbcbed3265394becc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d3eef474b19cc4a676ff8e25a1b2b46"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_sparse_matrix.html#a9d3eef474b19cc4a676ff8e25a1b2b46">SparseMatrix</a> (int rows, int cols)</td></tr>
 <tr class="separator:a9d3eef474b19cc4a676ff8e25a1b2b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4f28ca776692e2fca786e21324fcabb"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_sparse_matrix.html#ad4f28ca776692e2fca786e21324fcabb">get</a> (int row, int col) const</td></tr>
-<tr class="separator:ad4f28ca776692e2fca786e21324fcabb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0002cd1212b72a325b8a670155076dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_sparse_matrix.html#aa0002cd1212b72a325b8a670155076dd">set</a> (int row, int col, T value)</td></tr>
-<tr class="separator:aa0002cd1212b72a325b8a670155076dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39b697dd32221f971f0dfab6a9baf5f6"><td class="memTemplParams" colspan="2">template&lt;bool check = true&gt; </td></tr>
+<tr class="memitem:a39b697dd32221f971f0dfab6a9baf5f6"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classkso_1_1_sparse_matrix.html#a39b697dd32221f971f0dfab6a9baf5f6">get</a> (int row, int col) const</td></tr>
+<tr class="separator:a39b697dd32221f971f0dfab6a9baf5f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1617554449c365d3b69bf3fc45278f84"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_sparse_matrix.html#a1617554449c365d3b69bf3fc45278f84">elementCount</a> () const</td></tr>
+<tr class="separator:a1617554449c365d3b69bf3fc45278f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a0671e6396c2857a4bbf1179e54cee4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_sparse_matrix.html#a5a0671e6396c2857a4bbf1179e54cee4">nonZeroElementCount</a> () const</td></tr>
+<tr class="separator:a5a0671e6396c2857a4bbf1179e54cee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afef69f3f05d930812d0c30f7d9f497ff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_sparse_matrix.html#afef69f3f05d930812d0c30f7d9f497ff">getRows</a> () const</td></tr>
+<tr class="separator:afef69f3f05d930812d0c30f7d9f497ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb3696636e188e44f506412cda1b6633"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_sparse_matrix.html#adb3696636e188e44f506412cda1b6633">getCols</a> () const</td></tr>
+<tr class="separator:adb3696636e188e44f506412cda1b6633"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a207ae2589061f1847af56114940ab7e8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_sparse_matrix.html#a207ae2589061f1847af56114940ab7e8">equals</a> (<a class="el" href="classkso_1_1_sparse_matrix.html">SparseMatrix</a> const &amp;other) const</td></tr>
+<tr class="separator:a207ae2589061f1847af56114940ab7e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c287db237be9a7e5eb9fe164195a56a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_sparse_matrix.html">SparseMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_sparse_matrix.html#a9c287db237be9a7e5eb9fe164195a56a">operator+</a> (<a class="el" href="classkso_1_1_sparse_matrix.html">SparseMatrix</a> const &amp;other) const</td></tr>
+<tr class="separator:a9c287db237be9a7e5eb9fe164195a56a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78621cc8a88c7ae1300895ff2837285e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_sparse_matrix.html">SparseMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_sparse_matrix.html#a78621cc8a88c7ae1300895ff2837285e">operator-</a> (<a class="el" href="classkso_1_1_sparse_matrix.html">SparseMatrix</a> const &amp;other) const</td></tr>
+<tr class="separator:a78621cc8a88c7ae1300895ff2837285e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab45a3d711f5072c62e331966f1859dc4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_sparse_matrix.html">SparseMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_sparse_matrix.html#ab45a3d711f5072c62e331966f1859dc4">operator*</a> (<a class="el" href="classkso_1_1_sparse_matrix.html">SparseMatrix</a> const &amp;other) const</td></tr>
+<tr class="separator:ab45a3d711f5072c62e331966f1859dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab07057dd9863b354097b0d3ce84b398"><td class="memTemplParams" colspan="2">template&lt;bool check = true&gt; </td></tr>
+<tr class="memitem:aab07057dd9863b354097b0d3ce84b398"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classkso_1_1_sparse_matrix.html#aab07057dd9863b354097b0d3ce84b398">set</a> (int row, int col, T value)</td></tr>
+<tr class="separator:aab07057dd9863b354097b0d3ce84b398"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a5ca30308b47ae7073bffb683486d0301"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classkso_1_1_sparse_matrix.html">SparseMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_sparse_matrix.html#a5ca30308b47ae7073bffb683486d0301">binaryElementwiseOp</a> (<a class="el" href="classkso_1_1_sparse_matrix.html">SparseMatrix</a> const &amp;a, <a class="el" href="classkso_1_1_sparse_matrix.html">SparseMatrix</a> const &amp;b, T(*op)(T, T))</td></tr>
+<tr class="memdesc:a5ca30308b47ae7073bffb683486d0301"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行二元运算 op。该运算必须满足 op(0, 0) == 0  <a href="classkso_1_1_sparse_matrix.html#a5ca30308b47ae7073bffb683486d0301">更多...</a><br /></td></tr>
+<tr class="separator:a5ca30308b47ae7073bffb683486d0301"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 友元</h2></td></tr>
-<tr class="memitem:af06c41d6e9f1460b04cb0ab489822ce3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkso_1_1_sparse_matrix.html">SparseMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_sparse_matrix.html#af06c41d6e9f1460b04cb0ab489822ce3">binaryElementwiseOp</a> (<a class="el" href="classkso_1_1_sparse_matrix.html">SparseMatrix</a> const &amp;a, <a class="el" href="classkso_1_1_sparse_matrix.html">SparseMatrix</a> const &amp;b, T(*op)(T, T))</td></tr>
-<tr class="separator:af06c41d6e9f1460b04cb0ab489822ce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4ef906f959348217a2be45bec2b573f"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkso_1_1_sparse_matrix.html#aa4ef906f959348217a2be45bec2b573f">operator&lt;&lt;</a> (std::ostream &amp;stream, <a class="el" href="classkso_1_1_sparse_matrix.html">SparseMatrix</a> const &amp;m)</td></tr>
+<tr class="separator:aa4ef906f959348217a2be45bec2b573f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">成员类型定义说明</h2>
 <a id="adcc3c74b2ce8ece50aae4219f13b503e" name="adcc3c74b2ce8ece50aae4219f13b503e"></a>
@@ -235,13 +260,125 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
-<a id="ad4f28ca776692e2fca786e21324fcabb" name="ad4f28ca776692e2fca786e21324fcabb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4f28ca776692e2fca786e21324fcabb">&#9670;&nbsp;</a></span>get()</h2>
+<a id="a5ca30308b47ae7073bffb683486d0301" name="a5ca30308b47ae7073bffb683486d0301"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ca30308b47ae7073bffb683486d0301">&#9670;&nbsp;</a></span>binaryElementwiseOp()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classkso_1_1_sparse_matrix.html">SparseMatrix</a> <a class="el" href="classkso_1_1_sparse_matrix.html">kso::SparseMatrix</a>&lt; T &gt;::binaryElementwiseOp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_sparse_matrix.html">SparseMatrix</a>&lt; T &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_sparse_matrix.html">SparseMatrix</a>&lt; T &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T(*)(T, T)&#160;</td>
+          <td class="paramname"><em>op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>执行二元运算 op。该运算必须满足 op(0, 0) == 0 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td></td></tr>
+    <tr><td class="paramname">b</td><td></td></tr>
+    <tr><td class="paramname">op</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a1617554449c365d3b69bf3fc45278f84" name="a1617554449c365d3b69bf3fc45278f84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1617554449c365d3b69bf3fc45278f84">&#9670;&nbsp;</a></span>elementCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classkso_1_1_sparse_matrix.html">kso::SparseMatrix</a>&lt; T &gt;::elementCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a207ae2589061f1847af56114940ab7e8" name="a207ae2589061f1847af56114940ab7e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a207ae2589061f1847af56114940ab7e8">&#9670;&nbsp;</a></span>equals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classkso_1_1_sparse_matrix.html">kso::SparseMatrix</a>&lt; T &gt;::equals </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_sparse_matrix.html">SparseMatrix</a>&lt; T &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a39b697dd32221f971f0dfab6a9baf5f6" name="a39b697dd32221f971f0dfab6a9baf5f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39b697dd32221f971f0dfab6a9baf5f6">&#9670;&nbsp;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;bool check = true&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -273,13 +410,180 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="aa0002cd1212b72a325b8a670155076dd" name="aa0002cd1212b72a325b8a670155076dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0002cd1212b72a325b8a670155076dd">&#9670;&nbsp;</a></span>set()</h2>
+<a id="adb3696636e188e44f506412cda1b6633" name="adb3696636e188e44f506412cda1b6633"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb3696636e188e44f506412cda1b6633">&#9670;&nbsp;</a></span>getCols()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classkso_1_1_sparse_matrix.html">kso::SparseMatrix</a>&lt; T &gt;::getCols </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afef69f3f05d930812d0c30f7d9f497ff" name="afef69f3f05d930812d0c30f7d9f497ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afef69f3f05d930812d0c30f7d9f497ff">&#9670;&nbsp;</a></span>getRows()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classkso_1_1_sparse_matrix.html">kso::SparseMatrix</a>&lt; T &gt;::getRows </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a0671e6396c2857a4bbf1179e54cee4" name="a5a0671e6396c2857a4bbf1179e54cee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a0671e6396c2857a4bbf1179e54cee4">&#9670;&nbsp;</a></span>nonZeroElementCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classkso_1_1_sparse_matrix.html">kso::SparseMatrix</a>&lt; T &gt;::nonZeroElementCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab45a3d711f5072c62e331966f1859dc4" name="ab45a3d711f5072c62e331966f1859dc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab45a3d711f5072c62e331966f1859dc4">&#9670;&nbsp;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_sparse_matrix.html">SparseMatrix</a> <a class="el" href="classkso_1_1_sparse_matrix.html">kso::SparseMatrix</a>&lt; T &gt;::operator* </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_sparse_matrix.html">SparseMatrix</a>&lt; T &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c287db237be9a7e5eb9fe164195a56a" name="a9c287db237be9a7e5eb9fe164195a56a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c287db237be9a7e5eb9fe164195a56a">&#9670;&nbsp;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_sparse_matrix.html">SparseMatrix</a> <a class="el" href="classkso_1_1_sparse_matrix.html">kso::SparseMatrix</a>&lt; T &gt;::operator+ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_sparse_matrix.html">SparseMatrix</a>&lt; T &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a78621cc8a88c7ae1300895ff2837285e" name="a78621cc8a88c7ae1300895ff2837285e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78621cc8a88c7ae1300895ff2837285e">&#9670;&nbsp;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkso_1_1_sparse_matrix.html">SparseMatrix</a> <a class="el" href="classkso_1_1_sparse_matrix.html">kso::SparseMatrix</a>&lt; T &gt;::operator- </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkso_1_1_sparse_matrix.html">SparseMatrix</a>&lt; T &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aab07057dd9863b354097b0d3ce84b398" name="aab07057dd9863b354097b0d3ce84b398"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab07057dd9863b354097b0d3ce84b398">&#9670;&nbsp;</a></span>set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;bool check = true&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -318,8 +622,8 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">友元及相关函数文档</h2>
-<a id="af06c41d6e9f1460b04cb0ab489822ce3" name="af06c41d6e9f1460b04cb0ab489822ce3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af06c41d6e9f1460b04cb0ab489822ce3">&#9670;&nbsp;</a></span>binaryElementwiseOp</h2>
+<a id="aa4ef906f959348217a2be45bec2b573f" name="aa4ef906f959348217a2be45bec2b573f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4ef906f959348217a2be45bec2b573f">&#9670;&nbsp;</a></span>operator&lt;&lt;</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -330,22 +634,16 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classkso_1_1_sparse_matrix.html">SparseMatrix</a> binaryElementwiseOp </td>
+          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classkso_1_1_sparse_matrix.html">SparseMatrix</a>&lt; T &gt; const &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classkso_1_1_sparse_matrix.html">SparseMatrix</a>&lt; T &gt; const &amp;&#160;</td>
-          <td class="paramname"><em>b</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T(*)(T, T)&#160;</td>
-          <td class="paramname"><em>op</em>&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

@@ -26,31 +26,26 @@ var NAVTREE =
 [
   [ "Week 4 Task", "index.html", [
     [ "Week 4 作业", "index.html", [
-      [ "1. 项目概述", "index.html#autotoc_md1", null ],
-      [ "2. 项目特点", "index.html#autotoc_md2", [
-        [ "内存安全", "index.html#autotoc_md3", null ],
-        [ "懒拷贝", "index.html#autotoc_md4", null ],
-        [ "高效变换", "index.html#autotoc_md5", null ],
-        [ "Cache 友好", "index.html#autotoc_md6", null ]
-      ] ],
-      [ "3. API", "index.html#autotoc_md7", null ],
-      [ "4. 构建指南", "index.html#autotoc_md8", [
-        [ "单元测试", "index.html#autotoc_md9", [
-          [ "前提", "index.html#autotoc_md10", null ],
-          [ "构建和运行", "index.html#autotoc_md11", null ]
+      [ "项目概述", "index.html#autotoc_md1", null ],
+      [ "项目特点", "index.html#autotoc_md2", null ],
+      [ "使用指南", "index.html#autotoc_md3", null ],
+      [ "构建指南", "index.html#autotoc_md4", [
+        [ "单元测试", "index.html#autotoc_md5", [
+          [ "前提", "index.html#autotoc_md6", null ],
+          [ "构建和运行", "index.html#autotoc_md7", null ]
         ] ],
-        [ "API 文档", "index.html#autotoc_md12", [
-          [ "前提", "index.html#autotoc_md13", null ],
-          [ "构建和运行", "index.html#autotoc_md14", null ]
+        [ "API 文档", "index.html#autotoc_md8", [
+          [ "前提", "index.html#autotoc_md9", null ],
+          [ "构建和运行", "index.html#autotoc_md10", null ]
         ] ],
-        [ "代码覆盖", "index.html#autotoc_md15", [
+        [ "代码覆盖", "index.html#autotoc_md11", [
+          [ "前提", "index.html#autotoc_md12", null ],
+          [ "构建和运行", "index.html#autotoc_md13", null ],
+          [ "输出", "index.html#autotoc_md14", null ]
+        ] ],
+        [ "内存检测（Valgrind）", "index.html#autotoc_md15", [
           [ "前提", "index.html#autotoc_md16", null ],
-          [ "构建和运行", "index.html#autotoc_md17", null ],
-          [ "输出", "index.html#autotoc_md18", null ]
-        ] ],
-        [ "内存检测（Valgrind）", "index.html#autotoc_md19", [
-          [ "前提", "index.html#autotoc_md20", null ],
-          [ "构建和运行", "index.html#autotoc_md21", null ]
+          [ "构建和运行", "index.html#autotoc_md17", null ]
         ] ]
       ] ]
     ] ],
